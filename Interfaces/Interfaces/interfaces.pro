@@ -17,11 +17,11 @@ SOURCES += main.cpp\
     extendstheorylearningwidget.cpp \
     testingwidget.cpp
 
-HEADERS  += mainwindow.h \
-    startwidgetui.h \
-    testpreparingwidget.h \
-    extendstheorylearningwidget.h \
-    testingwidget.h
+HEADERS  += mainwindow.hpp \
+    startwidgetui.hpp \
+    testpreparingwidget.hpp \
+    extendstheorylearningwidget.hpp \
+    testingwidget.hpp
 
 FORMS    += mainwindow.ui \
     startwidgetui.ui \

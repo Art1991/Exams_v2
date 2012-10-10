@@ -1,4 +1,4 @@
-#include "reviewedtestserializator.h"
+#include "reviewedtestserializator.hpp"
 
 ReviewedTestSerializator::ReviewedTestSerializator()
 {

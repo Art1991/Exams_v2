@@ -1,12 +1,12 @@
-#include "mainwindow.h"
+#include "mainwindow.hpp"
 #include "ui_mainwindow.h"
 
-#include "executingtestselectingdialog.h"
-#include "extendedtheoryselectingdialog.h"
-#include "learningtestselectingdialog.h"
-#include "personalizationdialog.h"
-#include "testhelpselectingdialog.h"
-#include "testresultsdialog.h"
+#include "executingtestselectingdialog.hpp"
+#include "extendedtheoryselectingdialog.hpp"
+#include "learningtestselectingdialog.hpp"
+#include "personalizationdialog.hpp"
+#include "testhelpselectingdialog.hpp"
+#include "testresultsdialog.hpp"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),

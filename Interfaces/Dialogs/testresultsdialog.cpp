@@ -1,4 +1,4 @@
-#include "testresultsdialog.h"
+#include "testresultsdialog.hpp"
 #include "ui_testresultsdialog.h"
 
 TestResultsDialog::TestResultsDialog(QWidget *parent) :

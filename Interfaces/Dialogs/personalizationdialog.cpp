@@ -1,4 +1,4 @@
-#include "personalizationdialog.h"
+#include "personalizationdialog.hpp"
 #include "ui_personalizationdialog.h"
 
 PersonalizationDialog::PersonalizationDialog(QWidget *parent) :

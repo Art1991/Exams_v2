@@ -21,14 +21,14 @@ SOURCES += \
     abstracttesttask.cpp
 
 HEADERS  +=  \
-    reviewedtesttask.h \
-    dataclasses.h \
-    testtask.h \
-    examstest.h \
-    exception.h \
-    reviewedtest.h \
-    abstracttest.h \
-    abstracttesttask.h
+    reviewedtesttask.hpp \
+    dataclasses.hpp \
+    testtask.hpp \
+    examstest.hpp \
+    exception.hpp \
+    reviewedtest.hpp \
+    abstracttest.hpp \
+    abstracttesttask.hpp
 
 
 

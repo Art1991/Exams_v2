@@ -1,4 +1,4 @@
-#include "reviewedtest.h"
+#include "reviewedtest.hpp"
 
 ReviewedTest::ReviewedTest()
 {

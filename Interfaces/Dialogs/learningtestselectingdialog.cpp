@@ -1,4 +1,4 @@
-#include "learningtestselectingdialog.h"
+#include "learningtestselectingdialog.hpp"
 #include "ui_learningtestselectingdialog.h"
 
 LearningTestSelectingDialog::LearningTestSelectingDialog(QWidget *parent) :

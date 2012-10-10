@@ -2,7 +2,7 @@
 #include <QFile>
 #include <QTextCodec>
 
-#include "serializators.h"
+#include "serializators.hpp"
 
 int main(int argc, char *argv[])
 {

@@ -1,4 +1,4 @@
-#include "extendedtheoryselectingdialog.h"
+#include "extendedtheoryselectingdialog.hpp"
 #include "ui_extendedtheoryselectingdialog.h"
 
 ExtendedTheorySelectingDialog::ExtendedTheorySelectingDialog(QWidget *parent) :

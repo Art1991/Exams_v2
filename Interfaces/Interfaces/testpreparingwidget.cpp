@@ -1,4 +1,4 @@
-#include "testpreparingwidget.h"
+#include "testpreparingwidget.hpp"
 #include "ui_testpreparingwidget.h"
 
 TestPreparingWidget::TestPreparingWidget(QWidget *parent) :

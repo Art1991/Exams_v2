@@ -1,4 +1,4 @@
-#include "extendstheorylearningwidget.h"
+#include "extendstheorylearningwidget.hpp"
 #include "ui_extendstheorylearningwidget.h"
 
 ExtendsTheoryLearningWidget::ExtendsTheoryLearningWidget(QWidget *parent) :

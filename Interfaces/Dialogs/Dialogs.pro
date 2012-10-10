@@ -21,13 +21,13 @@ SOURCES += \
     testresultsdialog.cpp
 
 HEADERS  += \
-    mainwindow.h \
-    learningtestselectingdialog.h \
-    executingtestselectingdialog.h \
-    personalizationdialog.h \
-    extendedtheoryselectingdialog.h \
-    testhelpselectingdialog.h \
-    testresultsdialog.h
+    mainwindow.hpp \
+    learningtestselectingdialog.hpp \
+    executingtestselectingdialog.hpp \
+    personalizationdialog.hpp \
+    extendedtheoryselectingdialog.hpp \
+    testhelpselectingdialog.hpp \
+    testresultsdialog.hpp
 
 FORMS    += \
     mainwindow.ui \

@@ -1,4 +1,4 @@
-#include "exception.h"
+#include "exception.hpp"
 
 QMap<int, QString> Exception::errorsMap = QMap<int, QString>();
 //Exception::errorsMap.insert(-1, "Unknown exception");

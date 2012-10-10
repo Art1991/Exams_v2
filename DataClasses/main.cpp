@@ -1,6 +1,6 @@
 #include <QtGui/QApplication>
 
-#include "dataclasses.h"
+#include "dataclasses.hpp"
 
 
 int main(int argc, char *argv[])

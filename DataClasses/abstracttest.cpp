@@ -1,4 +1,4 @@
-#include "abstracttest.h"
+#include "abstracttest.hpp"
 /*
 template <typename TaskType>
 AbstractTest<TaskType>::AbstractTest()

@@ -19,11 +19,11 @@ SOURCES += \
     reviewedtestserializator.cpp
 
 HEADERS  += \
-    serializators.h \
-    abstractserializator.h \
-    examstestserializator.h \
-    fieldschecker.h \
-    reviewedtestserializator.h
+    serializators.hpp \
+    abstractserializator.hpp \
+    examstestserializator.hpp \
+    fieldschecker.hpp \
+    reviewedtestserializator.hpp
 
 RESOURCES += \
     serializators.qrc
@@ -40,14 +40,14 @@ SOURCES += \
     ../DataClasses/abstracttesttask.cpp
 
 HEADERS  +=  \
-    ../DataClasses/reviewedtesttask.h \
-    ../DataClasses/dataclasses.h \
-    ../DataClasses/testtask.h \
-    ../DataClasses/examstest.h \
-    ../DataClasses/exception.h \
-    ../DataClasses/reviewedtest.h \
-    ../DataClasses/abstracttest.h \
-    ../DataClasses/abstracttesttask.h
+    ../DataClasses/reviewedtesttask.hpp \
+    ../DataClasses/dataclasses.hpp \
+    ../DataClasses/testtask.hpp \
+    ../DataClasses/examstest.hpp \
+    ../DataClasses/exception.hpp \
+    ../DataClasses/reviewedtest.hpp \
+    ../DataClasses/abstracttest.hpp \
+    ../DataClasses/abstracttesttask.hpp
 
 
 

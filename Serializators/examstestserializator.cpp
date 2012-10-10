@@ -1,4 +1,4 @@
-#include "ExamsTestSerializator.h"
+#include "ExamsTestSerializator.hpp"
 
 ExamsTestSerializator::ExamsTestSerializator()
 {

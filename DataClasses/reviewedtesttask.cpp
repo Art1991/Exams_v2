@@ -1,4 +1,4 @@
-#include "reviewedtesttask.h"
+#include "reviewedtesttask.hpp"
 
 ReviewedTestTask::ReviewedTestTask(const QString &taskId,
                                    const QStringList &innerCodes,

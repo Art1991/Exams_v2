@@ -1,4 +1,4 @@
-#include "testtask.h"
+#include "testtask.hpp"
 
 TestTask::TestTask(const QString &taskId,
                    const AnswerType &answerType,

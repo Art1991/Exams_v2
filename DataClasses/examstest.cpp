@@ -1,4 +1,4 @@
-#include "examstest.h"
+#include "examstest.hpp"
 
 ExamsTest::ExamsTest()
 {

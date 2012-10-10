@@ -1,4 +1,4 @@
-#include "abstractserializator.h"
+#include "abstractserializator.hpp"
 
 AbstractSerializator::AbstractSerializator()
 {

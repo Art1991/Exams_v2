@@ -1,4 +1,4 @@
-#include "abstracttesttask.h"
+#include "abstracttesttask.hpp"
 
 AbstractTestTask::AbstractTestTask()
 {

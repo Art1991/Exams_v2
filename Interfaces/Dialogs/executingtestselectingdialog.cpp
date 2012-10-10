@@ -1,4 +1,4 @@
-#include "executingtestselectingdialog.h"
+#include "executingtestselectingdialog.hpp"
 #include "ui_executingtestselectingdialog.h"
 
 ExecutingTestSelectingDialog::ExecutingTestSelectingDialog(QWidget *parent) :

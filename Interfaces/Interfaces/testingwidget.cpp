@@ -1,4 +1,4 @@
-#include "testingwidget.h"
+#include "testingwidget.hpp"
 #include "ui_testingwidget.h"
 
 TestingWidget::TestingWidget(QWidget *parent) :
