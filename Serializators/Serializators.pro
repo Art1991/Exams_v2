@@ -16,14 +16,16 @@ SOURCES += \
     abstractserializator.cpp \
     examstestserializator.cpp \
     fieldschecker.cpp \
-    reviewedtestserializator.cpp
+    reviewedtestserializator.cpp \
+    tempclass.cpp
 
 HEADERS  += \
     serializators.hpp \
     abstractserializator.hpp \
     examstestserializator.hpp \
     fieldschecker.hpp \
-    reviewedtestserializator.hpp
+    reviewedtestserializator.hpp \
+    tempclass.hpp
 
 RESOURCES += \
     serializators.qrc
