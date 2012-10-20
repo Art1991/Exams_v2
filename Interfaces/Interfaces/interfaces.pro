@@ -15,13 +15,15 @@ SOURCES += main.cpp\
     startwidgetui.cpp \
     testpreparingwidget.cpp \
     extendstheorylearningwidget.cpp \
-    testingwidget.cpp
+    testingwidget.cpp \
+    user_informations.cpp
 
 HEADERS  += mainwindow.hpp \
     startwidgetui.hpp \
     testpreparingwidget.hpp \
     extendstheorylearningwidget.hpp \
-    testingwidget.hpp
+    testingwidget.hpp \
+    user_informations.hpp
 
 FORMS    += mainwindow.ui \
     startwidgetui.ui \
