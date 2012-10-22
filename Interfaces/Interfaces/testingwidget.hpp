@@ -21,6 +21,9 @@ public:
     explicit TestingWidget(QWidget *parent = 0);
     ~TestingWidget();
     
+private slots:
+    void on_stopTestButton_clicked();
+
 private:
     Ui::TestingWidget *ui;
 

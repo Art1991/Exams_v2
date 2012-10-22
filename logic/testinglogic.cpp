@@ -1,4 +1,4 @@
-#include "testinglogic.h"
+#include "testinglogic.hpp"
 
 TestingLogic::TestingLogic()
 {

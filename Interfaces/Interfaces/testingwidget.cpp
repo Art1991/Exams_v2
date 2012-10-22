@@ -122,3 +122,8 @@ void TestingWidget::answersBInit()
 void TestingWidget::answersCInit()
 {
 }
+
+void TestingWidget::on_stopTestButton_clicked()
+{
+
+}

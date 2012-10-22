@@ -19,4 +19,5 @@ SOURCES += main.cpp \
     testinglogic.cpp
 
 HEADERS += \
-    testinglogic.h
+    testinglogic.h \
+    testinglogic.hpp
