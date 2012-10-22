@@ -3,7 +3,7 @@
 
 #include "../KeyStorage/keystoragenode.hpp"
 #include "abstractserializator.hpp"
-#include <QString>
+
 
 class KeySerializator : public AbstractSerializator
 {
@@ -14,6 +14,7 @@ public:
     QString getElementName(const QString &type);
 
     QList<KeyStorageNode> loadKeys(const QString &url);
+    QFileInfoList getAllHtml(const QString &dir);
 };
 
 #endif // KEYSERIALIZATOR_HPP

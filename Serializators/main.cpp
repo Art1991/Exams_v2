@@ -21,8 +21,8 @@ int main(int argc, char *argv[])
     try
     {
 
-        l.loadKeys("c:\\textxml.xml", KeyStorageNode::Plugin);
-        //test = serializator.loadTest("c:\\reviewedtest.xml");
+
+        test = serializator.loadTest("c:\\reviewedtest.xml");
     }
     catch (Exception err)
     {

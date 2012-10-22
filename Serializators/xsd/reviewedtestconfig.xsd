@@ -18,7 +18,7 @@
 			<xsd:element name="testTaskXml" type="xsd:string" maxOccurs="1024" minOccurs="0"></xsd:element>
 		</xsd:sequence>
 			
-		<xsd:attribute name="taskId" use="required">
+		<xsd:attribute name="id" use="required">
 			<xsd:simpleType>
 				<xsd:restriction base="xsd:string">
 					<xsd:pattern value="[ABC][0-9]{1,}"/>
