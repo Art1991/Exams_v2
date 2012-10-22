@@ -9,7 +9,8 @@ class Key
 public:
     enum KeyType {
         innerCode,
-        outerCode
+        outerCode,
+        null
     };
 
     Key();
@@ -25,6 +26,8 @@ public:
     bool isNeighborFor(const Key &value) const;
     QList<int> toLevels(const QString &code);
 
+    static KeyType strToEnum(const QString &str);
+    static QString enumToStr(Key::KeyType type);
 private:
     QList<int> levels;
     KeyType type;

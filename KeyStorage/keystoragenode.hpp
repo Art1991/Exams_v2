@@ -3,23 +3,25 @@
 
 #include "key.hpp"
 #include <QString>
+#include <QMetaEnum>
 
 class KeyStorageNode
 {
 public:
-    enum KeyBind {
+   enum KeyBind {
         ExamsTestTask,
         ExamsTest,
         ReviewedTestTask,
         ReviewedTest,
         Theory,
-        Plugin
+        Plugin,
+        PluginUnit
     };
 
 
     KeyStorageNode();
-    KeyStorageNode(const QList<Key> &_KeyList, const QList<KeyBind> &_Binds, const QString &_name,
-                   const QString &_fileLink, const QString &_params):KeyList(_KeyList), Binds(_Binds),
+    KeyStorageNode(const QList<Key> &_KeyList, const KeyBind &_Bind, const QString &_name,
+                   const QString &_fileLink, const QString &_params):KeyList(_KeyList), Bind(_Bind),
         name(_name), fileLink(_fileLink), params(_params) {}
 
     const QString getPluginName() const;
@@ -27,12 +29,14 @@ public:
     const QString getElementName() const;
 
     const QList<Key> getKeyList() const;
-    const QList<KeyBind> getBinds() const;
+    const KeyBind getBind() const;
 
+    static  QString enumToStr(KeyBind enumVal);
+    static  KeyBind strToEnum(const QString &str);
 private:
 
     QList<Key> KeyList; // список ключей
-    QList<KeyBind> Binds; // к чему список ключей относится
+    KeyBind Bind; // к чему список ключей относится
     // где искать
     QString name; //имя плагина
     QString fileLink; //ссылка на плагин

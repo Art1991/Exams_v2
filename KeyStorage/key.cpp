@@ -13,7 +13,7 @@ Key::Key(const QString &_code, const KeyType &_type)
 
 bool Key::operator ==(const Key &value) const
 {
-    Key key = value;    
+    Key key = value;
     if ((key.levels.count() == levels.count()) && (key.type == type))
     {
         for (int i = 0; i < levels.count(); i++)
@@ -93,3 +93,25 @@ const QString Key::getKey() const
     str += QString::number(levels.at(sizeLevels - 1));
     return str;
 }
+
+Key::KeyType Key::strToEnum(const QString &str) {
+    QString str1 = str.toLower();
+    if (str1.compare("innercode") == 0) {
+        return Key::innerCode;
+    }
+    if (str1.compare("outercode") == 0) {
+        return Key::outerCode;
+    }
+    return Key::null;
+}
+
+QString Key::enumToStr( Key::KeyType type) {
+    switch(type) {
+    case Key::innerCode:
+        return "innerCode";
+    case Key::outerCode:
+        return "outerCode";
+
+    }
+}
+

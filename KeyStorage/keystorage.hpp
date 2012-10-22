@@ -7,7 +7,7 @@ class KeyStorage
     QList<KeyStorageNode> Storage;
 public:
     KeyStorage();
-    KeyStorage(const QList<KeyStorageNode> &storage):Storage(storege){}
+    KeyStorage(const QList<KeyStorageNode> &storage):Storage(storage){}
 
     const QList<KeyStorageNode> getNodes(const Key &value) const;
     const QList<KeyStorageNode> getNodes(const QList<Key> &value) const;

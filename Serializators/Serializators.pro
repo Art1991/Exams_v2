@@ -42,7 +42,9 @@ SOURCES += \
     ../DataClasses/reviewedtest.cpp \
     ../DataClasses/abstracttest.cpp \
     ../DataClasses/abstracttesttask.cpp\
-    ../Plugins/plugininfo.cpp
+    ../Plugins/plugininfo.cpp \
+    ../KeyStorage/keystoragenode.cpp\
+    ../KeyStorage/key.cpp
 
 HEADERS  +=  \
     ../DataClasses/reviewedtesttask.hpp \
@@ -53,7 +55,9 @@ HEADERS  +=  \
     ../DataClasses/reviewedtest.hpp \
     ../DataClasses/abstracttest.hpp \
     ../DataClasses/abstracttesttask.hpp\
-    ../Plugins/plugininfo.hpp
+    ../Plugins/plugininfo.hpp\
+    ../KeyStorage/keystoragenode.hpp\
+    ../KeyStorage/key.hpp
 
 
 
