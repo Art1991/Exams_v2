@@ -16,7 +16,8 @@ SOURCES += main.cpp\
     testpreparingwidget.cpp \
     extendstheorylearningwidget.cpp \
     testingwidget.cpp \
-    user_informations.cpp
+    user_informations.cpp \
+    facade.cpp
 
 HEADERS  += mainwindow.hpp \
     startwidgetui.hpp \
