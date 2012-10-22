@@ -2,8 +2,9 @@
 
 TestTask::TestTask(const QString &taskId,
                    const AnswerType &answerType,
-                   const QStringList &innerCodes,
-                   const QStringList &outerCodes,
+//                   const QStringList &innerCodes,
+//                   const QStringList &outerCodes,
+                   const QList<Key> &keys,
                    const QString &taskContent,
                    const QString &answer,
                    const QStringList &images,
@@ -12,8 +13,9 @@ TestTask::TestTask(const QString &taskId,
 {
     this->taskId = taskId;
     this->answerType = answerType;
-    this->innerCodes = innerCodes;
-    this->outerCodes = outerCodes;
+//    this->innerCodes = innerCodes;
+//    this->outerCodes = outerCodes;
+    this->keys = keys;
     this->taskContent = taskContent;
     this->answer = answer;
     this->images = images;
