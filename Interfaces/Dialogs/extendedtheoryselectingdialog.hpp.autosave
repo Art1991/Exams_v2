@@ -33,7 +33,9 @@ private slots:
 private:
     Ui::ExtendedTheorySelectingDialog *ui;
 
-    void makeTree(const QList<Key> &nodes);
+    void makeTree(const QList<Key> &keys);
+    bool findKeyInUITree(const QString &key);
+    void addNode(const KeyStorageNode &node);
 };
 
 #endif // EXTENDEDTHEORYSELECTINGDIALOG_H

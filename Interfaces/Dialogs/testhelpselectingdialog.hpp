@@ -2,6 +2,10 @@
 #define TESTHELPSELECTINGDIALOG_H
 
 #include <QDialog>
+#include <QList>
+#include <QString>
+
+class KeyStorageNode;
 
 namespace Ui {
     class TestHelpSelectingDialog;
@@ -15,8 +19,15 @@ public:
     explicit TestHelpSelectingDialog(QWidget *parent = 0);
     ~TestHelpSelectingDialog();
 
+    void setTheoryNodes(const QList<KeyStorageNode> &theoryNodes);
+    void setPracticeNodes(const QList<KeyStorageNode> &practiceNodes);
+
+    KeyStorageNode getSelectedKey() const;
+
 private slots:
     void on_canselPushButton_clicked();
+
+    void on_okPushButton_clicked();
 
 private:
     Ui::TestHelpSelectingDialog *ui;

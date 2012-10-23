@@ -220,6 +220,9 @@ QComboBox QAbstractItemView::item:hover  {
            <property name="text">
             <string>с подсказками</string>
            </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
           </widget>
          </item>
          <item>
@@ -252,6 +255,9 @@ QComboBox QAbstractItemView::item:hover  {
           <widget class="QRadioButton" name="radioButtonNotMixed">
            <property name="text">
             <string>обычный</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
            </property>
           </widget>
          </item>

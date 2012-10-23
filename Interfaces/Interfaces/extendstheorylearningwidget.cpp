@@ -12,3 +12,8 @@ ExtendsTheoryLearningWidget::~ExtendsTheoryLearningWidget()
 {
     delete ui;
 }
+
+void ExtendsTheoryLearningWidget::on_exitPushButton_clicked()
+{
+    emit menuJumpRequest();
+}

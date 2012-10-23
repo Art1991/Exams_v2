@@ -2,6 +2,9 @@
 #define TESTRESULTSDIALOG_H
 
 #include <QDialog>
+#include <QList>
+
+class DialogTestResults;
 
 namespace Ui {
     class TestResultsDialog;
@@ -15,8 +18,12 @@ public:
     explicit TestResultsDialog(QWidget *parent = 0);
     ~TestResultsDialog();
 
+    void setTestResults(const DialogTestResults &results);
+
 private slots:
     void on_canselPushButton_clicked();
+
+    void on_okPushButton_clicked();
 
 private:
     Ui::TestResultsDialog *ui;

@@ -15,5 +15,10 @@ TestHelpSelectingDialog::~TestHelpSelectingDialog()
 
 void TestHelpSelectingDialog::on_canselPushButton_clicked()
 {
-    this->close();
+    this->reject();
+}
+
+void TestHelpSelectingDialog::on_okPushButton_clicked()
+{
+    this->accept();
 }
