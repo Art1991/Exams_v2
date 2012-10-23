@@ -44,14 +44,24 @@ ReviewedTestTask ReviewedTestSerializator::getTask(const QDomNode &taskNode)
 
     QString taskId = currentElement.attribute("taskId");
 
+    QList<Key> keys;
     QStringList innerCodes = FieldsChecker::parseCodes(getElementsContent(currentElement, "innerCode"));
+    for (int i = 0; i < innerCodes.count(); i++)
+    {
+        Key key(innerCodes.at(i), key.innerCode);
+        keys << key;
+    }
     QStringList outerCodes = FieldsChecker::parseCodes(getElementsContent(currentElement, "outerCode"));
-
+    for (int i = 0; i < outerCodes.count(); i++)
+    {
+        Key key(outerCodes.at(i), key.outerCode);
+        keys << key;
+    }
     QString source = currentElement.firstChildElement("source").text();
 
     QStringList xmlTestTasks = getElementsContent(currentElement, "testTaskXml");
 
-    return ReviewedTestTask(taskId, innerCodes, outerCodes, source, xmlTestTasks);
+    return ReviewedTestTask(taskId, keys, source, xmlTestTasks);
 }
 
 void ReviewedTestSerializator::saveTest(const ReviewedTest &test, const QString &filename) throw (Exception)

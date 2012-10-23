@@ -4,22 +4,22 @@
  <widget class="QDialog" name="TestHelpSelectingDialog">
   <property name="geometry">
    <rect>
-	<x>0</x>
-	<y>0</y>
-	<width>470</width>
-	<height>340</height>
+    <x>0</x>
+    <y>0</y>
+    <width>470</width>
+    <height>340</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-	<width>470</width>
-	<height>340</height>
+    <width>470</width>
+    <height>340</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-	<width>470</width>
-	<height>340</height>
+    <width>470</width>
+    <height>340</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -90,59 +90,59 @@ QDialog QRadioButton::indicator:hover
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
    <property name="leftMargin">
-	<number>15</number>
+    <number>15</number>
    </property>
    <property name="topMargin">
-	<number>20</number>
+    <number>20</number>
    </property>
    <property name="rightMargin">
-	<number>15</number>
+    <number>15</number>
    </property>
    <property name="bottomMargin">
-	<number>20</number>
+    <number>20</number>
    </property>
    <item row="0" column="0" colspan="2">
-	<widget class="QLabel" name="label">
-	 <property name="sizePolicy">
-	  <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
-	   <horstretch>0</horstretch>
-	   <verstretch>0</verstretch>
-	  </sizepolicy>
-	 </property>
-	 <property name="text">
-	  <string>Помощь</string>
-	 </property>
-	 <property name="alignment">
-	  <set>Qt::AlignCenter</set>
-	 </property>
-	</widget>
+    <widget class="QLabel" name="label">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Помощь</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
    </item>
    <item row="1" column="0" rowspan="3" colspan="3">
-	<widget class="QWidget" name="widget" native="true">
-	 <layout class="QGridLayout" name="gridLayout">
-	  <property name="leftMargin">
-	   <number>20</number>
-	  </property>
-	  <property name="topMargin">
-	   <number>0</number>
-	  </property>
-	  <property name="rightMargin">
-	   <number>20</number>
-	  </property>
-	  <property name="bottomMargin">
-	   <number>0</number>
-	  </property>
-	  <item row="0" column="0">
-	   <widget class="QLabel" name="label_2">
-		<property name="text">
-		 <string>Перейти к:</string>
-		</property>
-	   </widget>
-	  </item>
-	  <item row="4" column="0" colspan="2">
-	   <widget class="QTreeWidget" name="treeWidget">
-		<property name="styleSheet">
-		 <string notr="true">* {
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QGridLayout" name="gridLayout">
+      <property name="leftMargin">
+       <number>20</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>20</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Перейти к:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0" colspan="2">
+       <widget class="QTreeWidget" name="treeWidgetChangeTheme">
+        <property name="styleSheet">
+         <string notr="true">* {
   background-color: #ffffff; 
   font-size: 16px;
   font-family: Arial, sans-serif;
@@ -170,144 +170,144 @@ QTreeWidget::branch:hover {
 QTreeWidget::item:hover {
   background-color: #c6e4f0;
 }*/</string>
-		</property>
-		<property name="editTriggers">
-		 <set>QAbstractItemView::NoEditTriggers</set>
-		</property>
-		<property name="columnCount">
-		 <number>1</number>
-		</property>
-		<attribute name="headerVisible">
-		 <bool>false</bool>
-		</attribute>
-		<column>
-		 <property name="text">
-		  <string>root</string>
-		 </property>
-		</column>
-		<item>
-		 <property name="text">
-		  <string>1</string>
-		 </property>
-		 <item>
-		  <property name="text">
-		   <string>1.1</string>
-		  </property>
-		  <item>
-		   <property name="text">
-			<string>1.1.1</string>
-		   </property>
-		  </item>
-		 </item>
-		 <item>
-		  <property name="text">
-		   <string>1.2</string>
-		  </property>
-		 </item>
-		 <item>
-		  <property name="text">
-		   <string>1.3</string>
-		  </property>
-		 </item>
-		</item>
-		<item>
-		 <property name="text">
-		  <string>2</string>
-		 </property>
-		 <item>
-		  <property name="text">
-		   <string>2.1</string>
-		  </property>
-		  <item>
-		   <property name="text">
-			<string>2.1.1</string>
-		   </property>
-		  </item>
-		  <item>
-		   <property name="text">
-			<string>2.1.2</string>
-		   </property>
-		  </item>
-		 </item>
-		 <item>
-		  <property name="text">
-		   <string>2.2</string>
-		  </property>
-		 </item>
-		</item>
-		<item>
-		 <property name="text">
-		  <string>3</string>
-		 </property>
-		</item>
-	   </widget>
-	  </item>
-	  <item row="2" column="1">
-	   <widget class="QRadioButton" name="radioButton">
-		<property name="text">
-		 <string>разбору задач</string>
-		</property>
-	   </widget>
-	  </item>
-	  <item row="3" column="1">
-	   <widget class="QRadioButton" name="radioButton_2">
-		<property name="text">
-		 <string>углубленной теории</string>
-		</property>
-	   </widget>
-	  </item>
-	 </layout>
-	</widget>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <property name="columnCount">
+         <number>1</number>
+        </property>
+        <attribute name="headerVisible">
+         <bool>false</bool>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>root</string>
+         </property>
+        </column>
+        <item>
+         <property name="text">
+          <string>1</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>1.1</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>1.1.1</string>
+           </property>
+          </item>
+         </item>
+         <item>
+          <property name="text">
+           <string>1.2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>1.3</string>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>2</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>2.1</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>2.1.1</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>2.1.2</string>
+           </property>
+          </item>
+         </item>
+         <item>
+          <property name="text">
+           <string>2.2</string>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>3</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QRadioButton" name="radioButtonTestAnalysis">
+        <property name="text">
+         <string>разбору задач</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QRadioButton" name="radioButtonTheory">
+        <property name="text">
+         <string>углубленной теории</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
    </item>
    <item row="4" column="1">
-	<widget class="QPushButton" name="canselPushButton">
-	 <property name="sizePolicy">
-	  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-	   <horstretch>0</horstretch>
-	   <verstretch>0</verstretch>
-	  </sizepolicy>
-	 </property>
-	 <property name="minimumSize">
-	  <size>
-	   <width>0</width>
-	   <height>35</height>
-	  </size>
-	 </property>
-	 <property name="maximumSize">
-	  <size>
-	   <width>16777215</width>
-	   <height>35</height>
-	  </size>
-	 </property>
-	 <property name="text">
-	  <string>Отмена</string>
-	 </property>
-	</widget>
+    <widget class="QPushButton" name="canselPushButton">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>35</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>35</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Отмена</string>
+     </property>
+    </widget>
    </item>
    <item row="4" column="0">
-	<widget class="QPushButton" name="okPushButton">
-	 <property name="sizePolicy">
-	  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-	   <horstretch>0</horstretch>
-	   <verstretch>0</verstretch>
-	  </sizepolicy>
-	 </property>
-	 <property name="minimumSize">
-	  <size>
-	   <width>0</width>
-	   <height>35</height>
-	  </size>
-	 </property>
-	 <property name="maximumSize">
-	  <size>
-	   <width>16777215</width>
-	   <height>35</height>
-	  </size>
-	 </property>
-	 <property name="text">
-	  <string>ОК</string>
-	 </property>
-	</widget>
+    <widget class="QPushButton" name="okPushButton">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>35</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>35</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>ОК</string>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>

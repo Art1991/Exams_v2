@@ -512,7 +512,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QComboBox" name="comboBox">
+          <widget class="QComboBox" name="comboBoxNavigation">
            <property name="minimumSize">
             <size>
              <width>0</width>
@@ -546,7 +546,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QScrollArea" name="scrollArea">
+          <widget class="QScrollArea" name="scrollAreaNavigation">
            <property name="styleSheet">
             <string notr="true"/>
            </property>
@@ -569,8 +569,8 @@
           </widget>
          </item>
         </layout>
-        <zorder>comboBox</zorder>
-        <zorder>scrollArea</zorder>
+        <zorder>comboBoxNavigation</zorder>
+        <zorder>scrollAreaNavigation</zorder>
         <zorder>label</zorder>
        </widget>
       </item>

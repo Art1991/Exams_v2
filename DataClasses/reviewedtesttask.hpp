@@ -10,8 +10,7 @@ class ReviewedTestTask : public AbstractTestTask
 {
 public:
     ReviewedTestTask(const QString &taskId,
-                     const QStringList &innerCodes,
-                     const QStringList &outerCodes,
+                     const QList<Key> &keys,
                      const QString &htmlSource,
                      const QStringList &xmlTestTasks);
 

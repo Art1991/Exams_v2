@@ -5,4 +5,7 @@ SUBDIRS += \
     Interfaces/Dialogs \
     Interfaces/Interfaces \
     Serializators \
-    Logic
+    Logic \
+    Plugins\
+    KeyStorage
+

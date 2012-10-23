@@ -300,14 +300,14 @@ QComboBox QAbstractItemView::item:hover  {
        </widget>
       </item>
       <item row="2" column="2">
-       <widget class="QRadioButton" name="radioButton">
+       <widget class="QRadioButton" name="radioButtonWithHelp">
         <property name="text">
          <string>с подсказками</string>
         </property>
        </widget>
       </item>
       <item row="4" column="2">
-       <widget class="QRadioButton" name="radioButton_2">
+       <widget class="QRadioButton" name="radioButtonWithoutHelp">
         <property name="text">
          <string>без подсказок</string>
         </property>
@@ -324,14 +324,14 @@ QComboBox QAbstractItemView::item:hover  {
        </widget>
       </item>
       <item row="7" column="2">
-       <widget class="QRadioButton" name="radioButton_3">
+       <widget class="QRadioButton" name="radioButtonNotMixed">
         <property name="text">
          <string>обычный</string>
         </property>
        </widget>
       </item>
       <item row="8" column="2">
-       <widget class="QRadioButton" name="radioButton_4">
+       <widget class="QRadioButton" name="radioButtonMixed">
         <property name="text">
          <string>смешанный</string>
         </property>

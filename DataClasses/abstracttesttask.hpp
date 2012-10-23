@@ -4,6 +4,8 @@
 #include <QString>
 #include <QStringList>
 
+#include "../KeyStorage/key.hpp"
+
 class AbstractTestTask
 {
 public:
@@ -13,15 +15,18 @@ public:
     const QStringList getInnerCodes() const;
     const QStringList getOuterCodes() const;
 
-    bool isInnerCodeRepresent(const QString &innerCode) const;
-    bool isOuterCodeRepresent(const QString &outerCode) const;
+    bool isInnerCodeRepresent(const Key &key) const;
+    bool isOuterCodeRepresent(const Key &key) const;
+//    bool isInnerCodeRepresent(const QString &innerCode) const;
+//    bool isOuterCodeRepresent(const QString &outerCode) const;
 
 protected:
 
     QString taskId;
 
-    QStringList innerCodes;
-    QStringList outerCodes;
+    QList<Key> keys;
+//    QStringList innerCodes;
+//    QStringList outerCodes;
 };
 
 #endif // ABSTRACTTESTTASK_H
