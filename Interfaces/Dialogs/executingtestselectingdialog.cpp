@@ -16,5 +16,10 @@ ExecutingTestSelectingDialog::~ExecutingTestSelectingDialog()
 
 void ExecutingTestSelectingDialog::on_canselPushButton_clicked()
 {
-    this->close();
+    this->reject();
+}
+
+void ExecutingTestSelectingDialog::on_okPushButton_clicked()
+{
+    this->accept();
 }

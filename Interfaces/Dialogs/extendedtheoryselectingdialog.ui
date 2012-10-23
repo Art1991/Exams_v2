@@ -248,71 +248,11 @@ QTreeWidget::item:hover {
          <set>QAbstractItemView::NoEditTriggers</set>
         </property>
         <property name="columnCount">
-         <number>1</number>
+         <number>0</number>
         </property>
         <attribute name="headerVisible">
          <bool>false</bool>
         </attribute>
-        <column>
-         <property name="text">
-          <string>root</string>
-         </property>
-        </column>
-        <item>
-         <property name="text">
-          <string>1</string>
-         </property>
-         <item>
-          <property name="text">
-           <string>1.1</string>
-          </property>
-          <item>
-           <property name="text">
-            <string>1.1.1</string>
-           </property>
-          </item>
-         </item>
-         <item>
-          <property name="text">
-           <string>1.2</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>1.3</string>
-          </property>
-         </item>
-        </item>
-        <item>
-         <property name="text">
-          <string>2</string>
-         </property>
-         <item>
-          <property name="text">
-           <string>2.1</string>
-          </property>
-          <item>
-           <property name="text">
-            <string>2.1.1</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>2.1.2</string>
-           </property>
-          </item>
-         </item>
-         <item>
-          <property name="text">
-           <string>2.2</string>
-          </property>
-         </item>
-        </item>
-        <item>
-         <property name="text">
-          <string>3</string>
-         </property>
-        </item>
        </widget>
       </item>
      </layout>

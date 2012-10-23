@@ -29,6 +29,10 @@ public:
     const QString getElementName() const;
 
     const QList<Key> getKeyList() const;
+
+    const QList<Key> getInnerKeys() const;
+    const QList<Key> getOuterKeys() const;
+
     const KeyBind getBind() const;
 
     static  QString enumToStr(KeyBind enumVal);

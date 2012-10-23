@@ -27,7 +27,8 @@ HEADERS  += \
     personalizationdialog.hpp \
     extendedtheoryselectingdialog.hpp \
     testhelpselectingdialog.hpp \
-    testresultsdialog.hpp
+    testresultsdialog.hpp \
+    dialogs.hpp
 
 FORMS    += \
     mainwindow.ui \

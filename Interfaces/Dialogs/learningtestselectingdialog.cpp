@@ -16,5 +16,10 @@ LearningTestSelectingDialog::~LearningTestSelectingDialog()
 
 void LearningTestSelectingDialog::on_canselPushButton_clicked()
 {
-    this->close();
+    this->reject();
+}
+
+void LearningTestSelectingDialog::on_okPushButton_clicked()
+{
+    this->accept();
 }

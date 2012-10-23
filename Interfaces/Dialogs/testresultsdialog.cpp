@@ -16,5 +16,10 @@ TestResultsDialog::~TestResultsDialog()
 
 void TestResultsDialog::on_canselPushButton_clicked()
 {
-    this->close();
+    this->reject();
+}
+
+void TestResultsDialog::on_okPushButton_clicked()
+{
+    this->accept();
 }

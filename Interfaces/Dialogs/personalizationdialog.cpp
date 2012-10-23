@@ -16,10 +16,10 @@ PersonalizationDialog::~PersonalizationDialog()
 
 void PersonalizationDialog::on_okPushButton_clicked()
 {
-
+    this->accept();
 }
 
 void PersonalizationDialog::on_canselPushButton_clicked()
 {
-    this->close();
+    this->reject();
 }
