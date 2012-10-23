@@ -23,8 +23,7 @@ public:
 
     TestTask(const QString &taskId,
              const AnswerType &answerType,
-             const QStringList &innerCodes,
-             const QStringList &outerCodes,
+             const QList<Key> &keys,
              const QString &taskContent,
              const QString &answer,
              const QStringList &images = QStringList(),

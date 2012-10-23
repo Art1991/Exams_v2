@@ -45,9 +45,20 @@ TestTask ExamsTestSerializator::getTask(const QDomNode &taskNode)
     QString taskId = currentElement.attribute("taskId");
     TestTask::AnswerType taskType = TestTask::fromStringType(currentElement.attribute("taskType"));
 
-    QStringList innerCodes = FieldsChecker::parseCodes(getElementsContent(currentElement, "innerCode"));
-    QStringList outerCodes = FieldsChecker::parseCodes(getElementsContent(currentElement, "outerCode"));
+    QList<Key> keys;
 
+    QStringList innerCodes = FieldsChecker::parseCodes(getElementsContent(currentElement, "innerCode"));
+    for (int i = 0; i < innerCodes.count(); i++)
+    {
+        Key key(innerCodes.at(i), key.innerCode);
+        keys << key;
+    }
+    QStringList outerCodes = FieldsChecker::parseCodes(getElementsContent(currentElement, "outerCode"));
+    for (int i = 0; i < outerCodes.count(); i++)
+    {
+        Key key(outerCodes.at(i), key.outerCode);
+        keys << key;
+    }
     QString content = currentElement.firstChildElement("content").text();
     QString answer = currentElement.firstChildElement("answer").text();
 
@@ -68,7 +79,7 @@ TestTask ExamsTestSerializator::getTask(const QDomNode &taskNode)
         answerHtml = answers.at(0).toElement().text();
     }
 
-    return TestTask(taskId, taskType, innerCodes, outerCodes, content, answer, images, cost, answerHtml);
+    return TestTask(taskId, taskType, keys, content, answer, images, cost, answerHtml);
 }
 
 void ExamsTestSerializator::saveTest(const ExamsTest &test, const QString &filename) throw (Exception)

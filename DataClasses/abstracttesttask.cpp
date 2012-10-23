@@ -6,36 +6,56 @@ AbstractTestTask::AbstractTestTask()
 
 const QStringList AbstractTestTask::getInnerCodes() const
 {
-    return innerCodes;
+    QStringList res;
+    for (int i = 0; i < keys.count(); i++)
+    {
+        if (keys.at(i).getKeyType() == keys.at(i).innerCode)
+        {
+            res << keys.at(i).getKey();
+        }
+    }
+    return res;
+//    return innerCodes;
 }
 
 const QStringList AbstractTestTask::getOuterCodes() const
 {
-    return outerCodes;
-}
-
-bool AbstractTestTask::isInnerCodeRepresent(const QString &innerCode) const
-{
-    for (int i = 0; i < innerCodes.length(); i++)
+    QStringList res;
+    for (int i = 0; i < keys.count(); i++)
     {
-        if (innerCode == innerCodes.at(i))
+        if (keys.at(i).getKeyType() == keys.at(i).outerCode)
         {
-            return true;
+            res << keys.at(i).getKey();
         }
     }
-
-    return false;
+    return res;
+//    return outerCodes;
 }
 
-bool AbstractTestTask::isOuterCodeRepresent(const QString &outerCode) const
+bool AbstractTestTask::isInnerCodeRepresent(const Key &key) const
 {
-    for (int i = 0; i < outerCodes.length(); i++)
-    {
-        if (outerCode == outerCodes.at(i))
-        {
-            return true;
-        }
-    }
+//    for (int i = 0; i < innerCodes.length(); i++)
+//    {
+//        if (innerCode == innerCodes.at(i))
+//        {
+//            return true;
+//        }
+//    }
 
-    return false;
+//    return false;
+    (key.getKeyType() == Key::innerCode) ? true : false;
+}
+
+bool AbstractTestTask::isOuterCodeRepresent(const Key &key) const
+{
+//    for (int i = 0; i < outerCodes.length(); i++)
+//    {
+//        if (outerCode == outerCodes.at(i))
+//        {
+//            return true;
+//        }
+//    }
+
+//    return false;
+    (key.getKeyType() == Key::outerCode) ? true : false;
 }

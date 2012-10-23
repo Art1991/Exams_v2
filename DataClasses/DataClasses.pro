@@ -30,6 +30,14 @@ HEADERS  +=  \
     abstracttest.hpp \
     abstracttesttask.hpp
 
+SOURCES += \
+    ../KeyStorage/keystoragenode.cpp\
+    ../KeyStorage/key.cpp
+
+HEADERS  +=  \
+    ../KeyStorage/keystoragenode.hpp\
+    ../KeyStorage/key.hpp
+
 
 
 

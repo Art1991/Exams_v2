@@ -372,7 +372,7 @@ QWebView {
           <number>15</number>
          </property>
          <item>
-          <widget class="QWebView" name="webView">
+          <widget class="QWebView" name="webViewStartInfo">
            <property name="url">
             <url>
              <string>about:blank</string>

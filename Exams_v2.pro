@@ -4,4 +4,6 @@ SUBDIRS += \
     DataClasses \
     Interfaces/Dialogs \
     Interfaces/Interfaces \
-    Serializators
+    Serializators \
+    Plugins\
+    KeyStorage
