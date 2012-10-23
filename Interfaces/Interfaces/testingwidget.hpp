@@ -28,12 +28,12 @@ signals:
 public:
     explicit TestingWidget(QWidget *parent = 0);
     ~TestingWidget();
-<<<<<<< HEAD
+
     
 private slots:
     void on_stopTestButton_clicked();
 
-=======
+
 
     void setTaskCount(const int aCount, const int bCount, const int cCount);
 
@@ -43,7 +43,7 @@ private slots:
 private slots:
     void on_startTestButton_clicked();
 
-    void on_stopTestButton_clicked();
+
 
     void on_exitPushButton_clicked();
 
@@ -54,7 +54,7 @@ private slots:
 
     void on_comboBox_currentIndexChanged(int index);
 
->>>>>>> e49a66d5c34993d6ac2865247682abfe544b5803
+
 private:
     Ui::TestingWidget *ui;
 
