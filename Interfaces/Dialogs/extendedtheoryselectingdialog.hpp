@@ -7,8 +7,8 @@
 #include <QString>
 #include <QStringList>
 
-#include "../KeyStorage/key.hpp"
-#include "../KeyStorage/keystoragenode.hpp"
+#include "../../KeyStorage/key.hpp"
+#include "../../KeyStorage/keystoragenode.hpp"
 
 namespace Ui {
     class ExtendedTheorySelectingDialog;
@@ -32,8 +32,6 @@ private slots:
 
 private:
     Ui::ExtendedTheorySelectingDialog *ui;
-
-    void makeTree(const QList<Key> &nodes);
 };
 
 #endif // EXTENDEDTHEORYSELECTINGDIALOG_H
