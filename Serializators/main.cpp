@@ -16,12 +16,10 @@ int main(int argc, char *argv[])
     ReviewedTestSerializator serializator;
 
     ReviewedTest test;
-    KeySerializator l;
+
 
     try
     {
-
-
         test = serializator.loadTest("c:\\reviewedtest.xml");
     }
     catch (Exception err)

@@ -50,13 +50,13 @@ TestTask ExamsTestSerializator::getTask(const QDomNode &taskNode)
     QStringList innerCodes = FieldsChecker::parseCodes(getElementsContent(currentElement, "innerCode"));
     for (int i = 0; i < innerCodes.count(); i++)
     {
-        Key key(innerCodes.at(i), key.innerCode);
+        Key key(innerCodes.at(i), Key::InnerCode);
         keys << key;
     }
     QStringList outerCodes = FieldsChecker::parseCodes(getElementsContent(currentElement, "outerCode"));
     for (int i = 0; i < outerCodes.count(); i++)
     {
-        Key key(outerCodes.at(i), key.outerCode);
+        Key key(outerCodes.at(i), Key::OuterCode);
         keys << key;
     }
     QString content = currentElement.firstChildElement("content").text();

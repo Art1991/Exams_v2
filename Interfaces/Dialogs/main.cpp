@@ -20,12 +20,12 @@ int main(int argc, char *argv[])
     w.show();*/
     QStringList l;
 
-    Key k1("1.2.1", Key::innerCode);
-    Key k2("1.2.2", Key::innerCode);
-    Key k3("1.2.2.1", Key::innerCode);
-    Key k4("1.3.1", Key::outerCode);
-    Key k5("1.1", Key::outerCode);
-    Key k6("2.1", Key::outerCode);
+    Key k1("1.2.1", Key::InnerCode);
+    Key k2("1.2.2", Key::InnerCode);
+    Key k3("1.2.2.1", Key::InnerCode);
+    Key k4("1.3.1", Key::OuterCode);
+    Key k5("1.1", Key::OuterCode);
+    Key k6("2.1", Key::OuterCode);
 
     QList<Key> keys1;
     keys1 << k1;

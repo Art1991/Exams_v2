@@ -34,7 +34,7 @@ void TestHelpSelectingDialog::on_okPushButton_clicked()
 
 void TestHelpSelectingDialog::addKey(QTreeWidgetItem *root, const Key &key, const QString &title, const uint nodeId, const int role)
 {
-    Key rootKey(root->text(0).split(" ").at(0), ((role == Qt::UserRole) ? Key::innerCode : Key::outerCode));
+    Key rootKey(root->text(0).split(" ").at(0), ((role == Qt::UserRole) ? Key::InnerCode : Key::OuterCode));
 
     if (rootKey == key)
     {
@@ -52,7 +52,7 @@ void TestHelpSelectingDialog::addKey(QTreeWidgetItem *root, const Key &key, cons
         {
             continue;
         }
-        Key currentKey(root->child(i)->text(0).split(" ").at(0), ((role == Qt::UserRole) ? Key::innerCode : Key::outerCode));
+        Key currentKey(root->child(i)->text(0).split(" ").at(0), ((role == Qt::UserRole) ? Key::InnerCode : Key::OuterCode));
 
         if ((currentKey.isParentFor(key)) || (currentKey == key))
         {

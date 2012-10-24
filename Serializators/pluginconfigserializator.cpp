@@ -34,7 +34,7 @@ PluginInfo PluginConfigSerializator::loadPluginConfig(const QString &filename) {
     for (int i = 0; i < units.length(); i++)
     {
 
-        codes.push_back(units.at(i).toElement().attribute("code"));
+        codes.push_back(units.at(i).toElement().elementsByTagName("innerCode").at(0).toElement().text());
         codes.push_back(units.at(i).toElement().elementsByTagName("title").at(0).toElement().text());
         codes.push_back(units.at(i).toElement().elementsByTagName("practiceFile").at(0).toElement().text());
         codes.push_back(units.at(i).toElement().elementsByTagName("testFile").at(0).toElement().text());
@@ -49,7 +49,7 @@ PluginInfo PluginConfigSerializator::loadPluginConfig(const QString &filename) {
 QDomDocument PluginConfigSerializator::getPluginConfigXML(PluginInfo info) {
     resultXml.clear();
 
-            QDomElement root = resultXml.createElement("root");
+    QDomElement root = resultXml.createElement("root");
     resultXml.appendChild(root);
 
     QDomElement globals = resultXml.createElement("globals");
@@ -61,29 +61,29 @@ QDomDocument PluginConfigSerializator::getPluginConfigXML(PluginInfo info) {
     startCode.appendChild(resultXml.createTextNode(info.getDescription()));
     QDomElement author = resultXml.createElement("author");
     author.appendChild(resultXml.createTextNode(info.getAuthor()));
-     globals.appendChild(title);
-     globals.appendChild(version);
-     globals.appendChild(startCode);
-     globals.appendChild(author);
-     root.appendChild(globals);
+    globals.appendChild(title);
+    globals.appendChild(version);
+    globals.appendChild(startCode);
+    globals.appendChild(author);
+    root.appendChild(globals);
 
     for(int i = 0; i < info.getCodes().length() - 3; i = i + 4)
     {
-      QDomElement unit = resultXml.createElement("unit");
+        QDomElement unit = resultXml.createElement("unit");
+        QDomElement innerCode = resultXml.createElement("innerCode");
+        innerCode.appendChild(resultXml.createTextNode(info.getCodes().at(i)));
+        unit.appendChild(innerCode);
 
-
-      unit.setAttribute("code", info.getCodes().at(i));
-      QDomElement title = resultXml.createElement("title");
-
-      title.appendChild(resultXml.createTextNode(info.getCodes().at(i + 1)));
-      unit.appendChild(title);
-      QDomElement practiceFile = resultXml.createElement("practiceFile");
-      practiceFile.appendChild(resultXml.createTextNode(info.getCodes().at(i + 2)));
-      unit.appendChild(practiceFile);
-      QDomElement testFile = resultXml.createElement("testFile");
-      testFile.appendChild(resultXml.createTextNode(info.getCodes().at(i + 3)));
-      unit.appendChild(testFile);
-      root.appendChild(unit);
+        QDomElement title = resultXml.createElement("title");
+        title.appendChild(resultXml.createTextNode(info.getCodes().at(i + 1)));
+        unit.appendChild(title);
+        QDomElement practiceFile = resultXml.createElement("practiceFile");
+        practiceFile.appendChild(resultXml.createTextNode(info.getCodes().at(i + 2)));
+        unit.appendChild(practiceFile);
+        QDomElement testFile = resultXml.createElement("testFile");
+        testFile.appendChild(resultXml.createTextNode(info.getCodes().at(i + 3)));
+        unit.appendChild(testFile);
+        root.appendChild(unit);
     }
 
     return resultXml;

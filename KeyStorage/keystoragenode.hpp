@@ -15,13 +15,14 @@ public:
         ReviewedTest,
         Theory,
         Plugin,
-        PluginUnit
+        PluginUnit,
+        Null
     };
 
 
-    KeyStorageNode();
+
     KeyStorageNode(const QList<Key> &_KeyList, const KeyBind &_Bind, const QString &_name,
-                   const QString &_fileLink, const QString &_params):KeyList(_KeyList), Bind(_Bind),
+                   const QString &_fileLink, const QString &_params):keyList(_KeyList), bind(_Bind),
         name(_name), fileLink(_fileLink), params(_params) {}
 
     const QString getPluginName() const;
@@ -39,8 +40,8 @@ public:
     static  KeyBind strToEnum(const QString &str);
 private:
 
-    QList<Key> KeyList; // список ключей
-    KeyBind Bind; // к чему список ключей относится
+    QList<Key> keyList; // список ключей
+    KeyBind bind; // к чему список ключей относится
     // где искать
     QString name; //имя плагина
     QString fileLink; //ссылка на плагин

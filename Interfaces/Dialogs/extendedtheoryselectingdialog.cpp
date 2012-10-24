@@ -53,7 +53,7 @@ KeyStorageNode ExtendedTheorySelectingDialog::getSelectedNode() const
 
     if (nodeId == -1)
     {
-        return KeyStorageNode();
+        //return KeyStorageNode(); исправить!
     }
 
     return nodes.at(nodeId);
@@ -73,6 +73,7 @@ void ExtendedTheorySelectingDialog::on_canselPushButton_clicked()
 void ExtendedTheorySelectingDialog::addKey(QTreeWidgetItem *root, const Key &key, const QString &title, const uint nodeId)
 {
     Key rootKey(root->text(0).split(" ").at(0));
+
 
     if (rootKey == key)
     {
