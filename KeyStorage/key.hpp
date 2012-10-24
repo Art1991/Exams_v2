@@ -14,6 +14,7 @@ public:
     };
 
     Key();
+    Key(const QString &_code);
     Key(const QString &_code, const KeyType &_type);
 
     bool operator== (const Key &value) const;
@@ -24,7 +25,11 @@ public:
     bool isChildrenFor(const Key &value) const;
     bool isParentFor(const Key &value) const;
     bool isNeighborFor(const Key &value) const;
-    QList<int> toLevels(const QString &code);
+    bool isDirectParentFor(const Key &value) const;
+
+    QList<int> toLevels(const QString &code) const;
+    QList<int> toLevels() const;
+
 
     static KeyType strToEnum(const QString &str);
     static QString enumToStr(Key::KeyType type);

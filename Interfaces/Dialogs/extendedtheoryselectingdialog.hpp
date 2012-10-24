@@ -6,6 +6,8 @@
 #include <QPair>
 #include <QString>
 #include <QStringList>
+#include <QTreeWidget>
+#include <QTreeWidgetItem>
 
 #include "../../KeyStorage/key.hpp"
 #include "../../KeyStorage/keystoragenode.hpp"
@@ -32,6 +34,10 @@ private slots:
 
 private:
     Ui::ExtendedTheorySelectingDialog *ui;
+
+    QList<KeyStorageNode> nodes;
+
+    void addKey(QTreeWidgetItem *root, const Key &key, const QString &title, const uint nodeId = 0);
 };
 
 #endif // EXTENDEDTHEORYSELECTINGDIALOG_H

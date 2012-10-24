@@ -24,6 +24,36 @@ const QList<Key> KeyStorageNode::getKeyList() const
     return KeyList;
 }
 
+const QList<Key> KeyStorageNode::getInnerKeys() const
+{
+    QList<Key> result;
+
+    for (uint i = 0; i < KeyList.length(); i++)
+    {
+        if (KeyList.at(i).getKeyType() == Key::innerCode)
+        {
+            result.append(KeyList.at(i));
+        }
+    }
+
+    return result;
+}
+
+const QList<Key> KeyStorageNode::getOuterKeys() const
+{
+    QList<Key> result;
+
+    for (uint i = 0; i < KeyList.length(); i++)
+    {
+        if (KeyList.at(i).getKeyType() == Key::outerCode)
+        {
+            result.append(KeyList.at(i));
+        }
+    }
+
+    return result;
+}
+
 const KeyStorageNode::KeyBind KeyStorageNode::getBind() const
 {
     return Bind;

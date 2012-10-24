@@ -5,6 +5,12 @@ Key::Key()
 {
 }
 
+Key::Key(const QString &_code)
+{
+    levels = toLevels(_code);
+    type = innerCode;
+}
+
 Key::Key(const QString &_code, const KeyType &_type)
 {
     levels = toLevels(_code);
@@ -56,6 +62,19 @@ bool Key::isNeighborFor(const Key &value) const
     return false;
 }
 
+bool Key::isDirectParentFor(const Key &value) const
+{
+    bool isParent = isParentFor(value);
+
+    if (isParent && (value.levels.length() == this->levels.length() + 1))
+    {
+        return true;
+    }
+
+    return false;
+
+}
+
 bool Key::isParentFor(const Key &value) const
 {
     Key key = value;
@@ -64,7 +83,7 @@ bool Key::isParentFor(const Key &value) const
             && (getKey().count() < strValue.count())) ? true : false;
 }
 
-QList<int> Key::toLevels(const QString &code)
+QList<int> Key::toLevels(const QString &code) const
 {
     QList<int> res;
     QString str = code;
@@ -75,6 +94,11 @@ QList<int> Key::toLevels(const QString &code)
         res << strLevels.at(i).toInt();
     }
     return res;
+}
+
+QList<int> Key::toLevels() const
+{
+    return levels;
 }
 
 const Key::KeyType Key::getKeyType() const

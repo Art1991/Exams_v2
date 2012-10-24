@@ -9,6 +9,7 @@ QT       += core gui
 #TARGET = Dialogs
 #TEMPLATE = app
 
+INCLUDEPATH += ../../KeyStorage
 
 SOURCES += \
     main.cpp \
@@ -18,7 +19,9 @@ SOURCES += \
     personalizationdialog.cpp \
     extendedtheoryselectingdialog.cpp \
     testhelpselectingdialog.cpp \
-    testresultsdialog.cpp
+    testresultsdialog.cpp \
+    ../../KeyStorage/keystoragenode.cpp \
+    ../../KeyStorage/key.cpp
 
 HEADERS  += \
     mainwindow.hpp \
@@ -28,7 +31,9 @@ HEADERS  += \
     extendedtheoryselectingdialog.hpp \
     testhelpselectingdialog.hpp \
     testresultsdialog.hpp \
-    dialogs.hpp
+    dialogs.hpp \
+    ../../KeyStorage/keystoragenode.hpp \
+    ../../KeyStorage/key.hpp
 
 FORMS    += \
     mainwindow.ui \
