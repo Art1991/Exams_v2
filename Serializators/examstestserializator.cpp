@@ -30,7 +30,7 @@ ExamsTest ExamsTestSerializator::loadTest(const QString &filename)
 
     QDomNodeList tasks = xml.elementsByTagName("task");
 
-    for (int i = 0; i < tasks.length(); i++)
+    for (uint i = 0; i < tasks.length(); i++)
     {
         test.addTask(getTask(tasks.at(i)));
     }

@@ -40,7 +40,7 @@ QStringList AbstractSerializator::getElementsContent(const QDomElement &element,
 
     QDomNodeList tags = element.elementsByTagName(tagname);
 
-    for (int i = 0; i < tags.length(); i++)
+    for (uint i = 0; i < tags.length(); i++)
     {
         result.append(tags.at(i).toElement().text());
     }
