@@ -17,7 +17,6 @@ SOURCES += \
     exception.cpp \
     reviewedtest.cpp \
     main.cpp \
-    abstracttest.cpp \
     abstracttesttask.cpp
 
 HEADERS  +=  \
@@ -27,7 +26,6 @@ HEADERS  +=  \
     examstest.hpp \
     exception.hpp \
     reviewedtest.hpp \
-    abstracttest.hpp \
     abstracttesttask.hpp
 
 SOURCES += \

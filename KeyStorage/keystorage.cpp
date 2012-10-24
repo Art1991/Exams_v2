@@ -1,8 +1,6 @@
 #include "keystorage.hpp"
 
-KeyStorage::KeyStorage()
-{
-}
+
 
 const QList<KeyStorageNode> KeyStorage::getNodes(const Key &value) const
 {
@@ -30,11 +28,10 @@ const QList<KeyStorageNode> KeyStorage::getNodes(const QList<Key> &value) const
 
 const KeyStorageNode KeyStorage::getBaseNode(const Key &value) const
 {
-    KeyStorageNode outKey;
+  /*  KeyStorageNode outKey; исправить
     Key key = value;
     for(int i = 0; i < Storage.count(); i++)
     {
-
         for(int j = 0; j < Storage.at(i).getKeyList().count(); j++)
         {
             if (key.isChildrenFor(Storage.at(i).getKeyList().at(j)))
@@ -47,7 +44,7 @@ const KeyStorageNode KeyStorage::getBaseNode(const Key &value) const
 
         }
     }
-    return outKey;
+    return outKey; */
 }
 
 const QList<KeyStorageNode> KeyStorage::getAllNodes() const

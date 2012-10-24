@@ -6,10 +6,10 @@ KeySerializator::KeySerializator()
 {
 }
 
-QList<KeyStorageNode> KeySerializator::loadKeys(const QString &filename, const KeyStorageNode::KeyBind &typeXml) {
+QList<KeyStorageNode> KeySerializator::loadKeys(const QString &filename, const KeyStorageNode::KeyBind &typeXml)
+{
     QDomDocument xml;
     QString type =  KeyStorageNode::enumToStr(typeXml).toLower();
-    KeyStorageNode::KeyBind a = KeyStorageNode::strToEnum("plugin");
     try
     {
         loadXmlSchema(":/xsd/xsd/" + type + "config.xsd");
@@ -33,7 +33,8 @@ QList<KeyStorageNode> KeySerializator::loadKeys(const QString &filename, const K
 
     }
     QList<Key> keyList;
-    for (int i = 0; i < outList.count(); i++) {
+    for (int i = 0; i < outList.count(); i++)
+    {
         keyList.append(outList.at(i).getKeyList());
     }
     outList.push_front(KeyStorageNode(keyList,typeXml, xml.elementsByTagName("title").at(0).toElement().text(),
@@ -42,12 +43,13 @@ QList<KeyStorageNode> KeySerializator::loadKeys(const QString &filename, const K
 
 
 
-QList<Key> KeySerializator::getKeyList(const QDomElement &element){
+QList<Key> KeySerializator::getKeyList(const QDomElement &element)
+{
     QDomNodeList childs = element.childNodes();
     QList<Key> keyList;
     for(int i = 0; i< childs.count(); i++){
         Key::KeyType nodeName = Key::strToEnum(childs.at(i).nodeName());
-        if (nodeName == Key::innerCode || nodeName == Key::outerCode) {
+        if (nodeName == Key::InnerCode || nodeName == Key::OuterCode) {
             keyList.push_back(Key(childs.at(i).toElement().text()
                                   ,nodeName));
         }
@@ -55,49 +57,57 @@ QList<Key> KeySerializator::getKeyList(const QDomElement &element){
     return keyList;
 }
 
-QString KeySerializator::getElementName(const QString &type) {
-    if (type.compare("examstest")*type.compare("reviewedtest") == 0) {
+QString KeySerializator::getElementName(const QString &type)
+{
+    if (type.compare("examstest")*type.compare("reviewedtest") == 0)
+    {
         return "task";
     }
-    if (type.compare( "plugin") == 0) {
+    if (type.compare( "plugin") == 0)
+    {
         return "unit";
     }
-    if (type.compare("theory") == 0 ) {
+    if (type.compare("theory") == 0 )
+    {
         return "theory";
     }
     return "";
 }
 
 
-QList<KeyStorageNode> KeySerializator::loadKeys(const QString &url) {
+QList<KeyStorageNode> KeySerializator::loadKeys(const QString &url)
+{
     QFileInfoList allHtml = getAllHtml(url);
     QList<KeyStorageNode> outList;
-    for (int i = 0; i < allHtml.count(); i++) {
+    for (int i = 0; i < allHtml.count(); i++)
+    {
         QString key = allHtml.at(i).fileName().split("_").at(0);
-        QString name = allHtml.at(i).fileName().split("_").at(1);
+        QString name = allHtml.at(i).fileName().split("_").at(1).split(".").at(0);
         QList<Key> list;
-        list.push_back(Key(key, Key::innerCode));
+        list.push_back(Key(key, Key::InnerCode));
         outList.push_back(KeyStorageNode(list, KeyStorageNode::Theory, name, allHtml.at(i).filePath(), "theory"));
     }
     return outList;
 }
 
-QFileInfoList KeySerializator::getAllHtml(const QString &dir) {
+QFileInfoList KeySerializator::getAllHtml(const QString &dir)
+{
     QFileInfoList list;
     QDirIterator iterator (dir, QDir::Files | QDir::NoSymLinks, QDirIterator::Subdirectories);
     while(iterator.hasNext())
     {
         iterator.next();
         QDir directory(iterator.fileInfo().absolutePath());
-
         QFileInfoList dirContent = directory.entryInfoList(QStringList()
                                                            << "*.html" << "*.htm",
                                                            QDir::Dirs | QDir::Files | QDir::NoDotAndDotDot);
 
-       list.append(dirContent);
+        list.append(dirContent);
     }
     return list;
 }
+
+
 
 
 

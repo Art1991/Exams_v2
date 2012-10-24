@@ -17,16 +17,13 @@ public:
 
     bool isInnerCodeRepresent(const Key &key) const;
     bool isOuterCodeRepresent(const Key &key) const;
-//    bool isInnerCodeRepresent(const QString &innerCode) const;
-//    bool isOuterCodeRepresent(const QString &outerCode) const;
 
 protected:
 
     QString taskId;
 
     QList<Key> keys;
-//    QStringList innerCodes;
-//    QStringList outerCodes;
+
 };
 
 #endif // ABSTRACTTESTTASK_H

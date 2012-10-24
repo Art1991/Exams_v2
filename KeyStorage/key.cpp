@@ -1,8 +1,10 @@
 #include <QStringList>
 #include "key.hpp"
 
-Key::Key()
+Key::Key(const QString &_code)
 {
+    levels = toLevels(_code);
+    type = InnerCode;
 }
 
 Key::Key(const QString &_code, const KeyType &_type)
@@ -28,12 +30,22 @@ bool Key::operator ==(const Key &value) const
     return false;
 }
 
-bool Key::isChildrenFor(const Key &value) const
+bool Key::isParentFor(const Key &value) const
 {
     Key key = value;
     QString strValue = key.getKey(); // родитель
     return (getKey().startsWith(strValue)
             && (strValue.count() < getKey().count())) ? true : false;
+}
+
+bool Key::isDirectParentFor(const Key &value) const
+{
+    bool isParent = isParentFor(value);
+    if (isParent && (value.levels.length() == this->levels.length() + 1))
+    {
+        return true;
+    }
+    return false;
 }
 
 bool Key::isNeighborFor(const Key &value) const
@@ -56,10 +68,10 @@ bool Key::isNeighborFor(const Key &value) const
     return false;
 }
 
-bool Key::isParentFor(const Key &value) const
+bool Key::isChildrenFor(const Key &value) const
 {
     Key key = value;
-    QString strValue = key.getKey(); // потомок
+    QString strValue = key.getKey();
     return (strValue.startsWith(getKey())
             && (getKey().count() < strValue.count())) ? true : false;
 }
@@ -76,6 +88,12 @@ QList<int> Key::toLevels(const QString &code)
     }
     return res;
 }
+
+QList<int> Key::toLevels() const
+{
+    return levels;
+}
+
 
 const Key::KeyType Key::getKeyType() const
 {
@@ -97,21 +115,23 @@ const QString Key::getKey() const
 Key::KeyType Key::strToEnum(const QString &str) {
     QString str1 = str.toLower();
     if (str1.compare("innercode") == 0) {
-        return Key::innerCode;
+        return Key::InnerCode;
     }
     if (str1.compare("outercode") == 0) {
-        return Key::outerCode;
+        return Key::OuterCode;
     }
-    return Key::null;
+    return Key::Null;
 }
 
 QString Key::enumToStr( Key::KeyType type) {
     switch(type) {
-    case Key::innerCode:
-        return "innerCode";
-    case Key::outerCode:
-        return "outerCode";
-
+    case Key::InnerCode:
+        return "InnerCode";
+    case Key::OuterCode:
+        return "OuterCode";
+    case Key::Null:
+        return "Null";
     }
 }
+
 

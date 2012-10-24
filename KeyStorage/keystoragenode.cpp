@@ -1,8 +1,6 @@
 #include "keystoragenode.hpp"
 
-KeyStorageNode::KeyStorageNode()
-{
-}
+
 
 const QString KeyStorageNode::getPluginName() const
 {
@@ -21,12 +19,33 @@ const QString KeyStorageNode::getElementName() const
 
 const QList<Key> KeyStorageNode::getKeyList() const
 {
-    return KeyList;
+    return keyList;
 }
 
 const KeyStorageNode::KeyBind KeyStorageNode::getBind() const
 {
-    return Bind;
+    return bind;
+}
+
+const QList<Key> KeyStorageNode::getInnerKeys() const{
+    QList<Key> res;
+    for (int i = 0; i < keyList.count(); i++) {
+        if (keyList.at(i).getKeyType() == Key::InnerCode) {
+            res.push_back(keyList.at(i));
+        }
+    }
+    return res;
+}
+
+const QList<Key> KeyStorageNode::getOuterKeys() const{
+    QList<Key> res;
+    for (int i = 0; i < keyList.count(); i++)
+    {
+        if (keyList.at(i).getKeyType() == Key::OuterCode) {
+            res.push_back(keyList.at(i));
+        }
+    }
+    return res;
 }
 
 KeyStorageNode::KeyBind KeyStorageNode::strToEnum(const QString &str) {
@@ -45,13 +64,14 @@ KeyStorageNode::KeyBind KeyStorageNode::strToEnum(const QString &str) {
         return KeyStorageNode::ReviewedTestTask;
     if (str1== "reviewedtest")
         return KeyStorageNode::ReviewedTest;
+    return KeyStorageNode::Null;
 
 }
 
 QString KeyStorageNode::enumToStr(KeyStorageNode::KeyBind enumVal) {
     switch(enumVal) {
     case KeyStorageNode::ExamsTestTask:
-        return "ExansTestTask";
+        return "ExamsTestTask";
     case KeyStorageNode::ExamsTest:
         return "ExamsTest";
     case KeyStorageNode::ReviewedTestTask:
@@ -68,3 +88,4 @@ QString KeyStorageNode::enumToStr(KeyStorageNode::KeyBind enumVal) {
         return "";
     }
 }
+
