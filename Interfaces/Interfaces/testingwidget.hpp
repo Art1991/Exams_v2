@@ -28,32 +28,22 @@ signals:
 public:
     explicit TestingWidget(QWidget *parent = 0);
     ~TestingWidget();
+    void setTaskCount(const int aCount, const int bCount, const int cCount);
 
     
 private slots:
     void on_stopTestButton_clicked();
-
-
-
-    void setTaskCount(const int aCount, const int bCount, const int cCount);
-
     void hideHelpButtons();
     void showHelpButtons();
 
 private slots:
     void on_startTestButton_clicked();
-
-
-
     void on_exitPushButton_clicked();
-
     void on_taskPushButton_clicked();
     void on_taskHelpPushButton_clicked();
-
     void on_taskGroupSwitched();
-
     void on_comboBox_currentIndexChanged(int index);
-
+    void on_comboBoxNavigation_currentIndexChanged(int index);
 
 private:
     Ui::TestingWidget *ui;
@@ -73,6 +63,8 @@ private:
     void showAAnswersFields(const int count);
     void showBAnswersFields(const int count);
     void showCAnswersFields(const int count);
+
+
 };
 
 #endif // TESTINGWIDGET_H

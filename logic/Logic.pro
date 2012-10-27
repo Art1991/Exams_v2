@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core
+QT       += core xml
 
 QT       -= gui
 
@@ -20,4 +20,5 @@ SOURCES += main.cpp \
 
 HEADERS += \
     testinglogic.h \
-    testinglogic.hpp
+    testinglogic.hpp \
+    dependancies.h

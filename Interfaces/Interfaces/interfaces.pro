@@ -16,15 +16,19 @@ SOURCES += main.cpp\
     testpreparingwidget.cpp \
     extendstheorylearningwidget.cpp \
     testingwidget.cpp \
-    user_informations.cpp \
-    facade.cpp
+    facade.cpp \
+    testingwidgetfacade.cpp \
+    ../../Logic/testinglogic.cpp \
+    testingtaskwidget.cpp
 
 HEADERS  += mainwindow.hpp \
     startwidgetui.hpp \
     testpreparingwidget.hpp \
     extendstheorylearningwidget.hpp \
     testingwidget.hpp \
-    user_informations.hpp
+    testingwidgetfacade.hpp \
+    ../../Logic/testinglogic.hpp \
+    testingtaskwidget.hpp
 
 FORMS    += mainwindow.ui \
     startwidgetui.ui \

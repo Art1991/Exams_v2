@@ -8,10 +8,10 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     //ui->stackedWidget->addWidget(new ExtendsTheoryLearningWidget());
     //ui->stackedWidget->addWidget(new StartWidgetUI());
-    /*TestingWidget *t = new TestingWidget();
+    TestingWidget *t = new TestingWidget();
     t->setTaskCount(15, 10, 0);
-    ui->stackedWidget->addWidget(t);*/
-    ui->stackedWidget->addWidget(new TestPreparingWidget());
+    ui->stackedWidget->addWidget(t);
+    //ui->stackedWidget->addWidget(new TestPreparingWidget());
 
     //ui->stackedWidget->setCurrentIndex(0);
 

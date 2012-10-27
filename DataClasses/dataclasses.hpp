@@ -6,7 +6,6 @@
 #include "testtask.hpp"
 #include "examstest.hpp"
 #include "reviewedtest.hpp"
-
 #include "exception.hpp"
 
 #endif // DATACLASSES_H

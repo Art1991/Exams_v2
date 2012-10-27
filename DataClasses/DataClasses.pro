@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core
+QT       += core xml
 
 CONFIG += console
 
@@ -17,7 +17,8 @@ SOURCES += \
     exception.cpp \
     reviewedtest.cpp \
     main.cpp \
-    abstracttesttask.cpp
+    abstracttesttask.cpp \
+    userinformations.cpp
 
 HEADERS  +=  \
     reviewedtesttask.hpp \
@@ -26,7 +27,8 @@ HEADERS  +=  \
     examstest.hpp \
     exception.hpp \
     reviewedtest.hpp \
-    abstracttesttask.hpp
+    abstracttesttask.hpp \
+    userinformations.hpp
 
 SOURCES += \
     ../KeyStorage/keystoragenode.cpp\
