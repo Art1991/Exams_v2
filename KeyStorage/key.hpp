@@ -26,7 +26,7 @@ public:
     bool isNeighborFor(const Key &value) const;
     bool isDirectParentFor(const Key &value) const;
 
-    QList<int> toLevels() const;
+    QList<int> getLevels() const;
 
     static KeyType strToEnum(const QString &str);
     static QString enumToStr(Key::KeyType type);
