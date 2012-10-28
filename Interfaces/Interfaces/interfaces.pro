@@ -16,7 +16,6 @@ SOURCES += main.cpp\
     testpreparingwidget.cpp \
     extendstheorylearningwidget.cpp \
     testingwidget.cpp \
-    facade.cpp \
     testingwidgetfacade.cpp \
     ../../Logic/testinglogic.cpp \
     testingtaskwidget.cpp

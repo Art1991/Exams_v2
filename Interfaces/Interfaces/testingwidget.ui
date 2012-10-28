@@ -565,6 +565,7 @@
               <height>373</height>
              </rect>
             </property>
+            <zorder>comboBoxNavigation</zorder>
            </widget>
           </widget>
          </item>

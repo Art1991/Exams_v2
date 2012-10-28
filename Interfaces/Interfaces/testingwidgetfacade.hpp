@@ -32,7 +32,8 @@ signals:
 public slots:
     // jumpToTaskRequest(taskId)
     void displayTaskById(QString);
-
+    void saveResults(QStringList);
+    void beginTesting();
 };
 
 #endif // TESTINGWIDGETFACADE_H

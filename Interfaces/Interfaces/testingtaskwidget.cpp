@@ -22,3 +22,7 @@ void TestingTaskWidget::showAnswers(QStringList answers) {
     //  1 написать послностью класс тестингтасквиджет
     //  или 2 - сначала связать фасады с логикой
 }
+
+void TestingTaskWidget::showResult(QStringList results) {
+
+}
