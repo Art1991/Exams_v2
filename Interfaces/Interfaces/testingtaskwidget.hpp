@@ -16,7 +16,7 @@ private:
     //какие-то текстовые поля и прочие виджеты внутри
 public:
     TestingTaskWidget();
-
+    void showResult(QStringList);
     void showTaskText(QString);
     void showAnswers(QStringList);
 };

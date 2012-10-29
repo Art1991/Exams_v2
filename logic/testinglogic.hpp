@@ -11,10 +11,11 @@ public:
     ExamsTest currTest;
 
     TestingLogic();
-    void save_Results();
-    void transition_To_Paragraph();
-    void show_Exercise();
+    void saveResult();
+    void transitionToParagraph();
+    void showExercise();
 
+    QStringList getResult(QStringList );
     QString getTaskTextById(QString id);
     QStringList getAnswersById(QString id);
     //загрузка теста
