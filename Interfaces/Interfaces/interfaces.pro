@@ -17,8 +17,8 @@ SOURCES += main.cpp\
     extendstheorylearningwidget.cpp \
     testingwidget.cpp \
     testingwidgetfacade.cpp \
-    ../../Logic/testinglogic.cpp \
-    testingtaskwidget.cpp
+    testingtaskwidget.cpp \
+    ../../Logic/testinglogic.cpp
 
 HEADERS  += mainwindow.hpp \
     startwidgetui.hpp \
@@ -26,8 +26,8 @@ HEADERS  += mainwindow.hpp \
     extendstheorylearningwidget.hpp \
     testingwidget.hpp \
     testingwidgetfacade.hpp \
-    ../../Logic/testinglogic.hpp \
-    testingtaskwidget.hpp
+    testingtaskwidget.hpp \
+    ../../Logic/testinglogic.hpp
 
 FORMS    += mainwindow.ui \
     startwidgetui.ui \

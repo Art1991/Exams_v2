@@ -1,4 +1,4 @@
-﻿#-------------------------------------------------
+#-------------------------------------------------
 #
 # Project created by QtCreator 2012-08-26T17:39:09
 #
@@ -51,7 +51,7 @@ HEADERS  +=  \
     ../DataClasses/testtask.hpp \
     ../DataClasses/examstest.hpp \
     ../DataClasses/exception.hpp \
-    ../DataClasses/reviewedtest.hpp \   
+    ../DataClasses/reviewedtest.hpp \
     ../DataClasses/abstracttesttask.hpp\
     ../Plugins/plugininfo.hpp\
     ../KeyStorage/keystoragenode.hpp\

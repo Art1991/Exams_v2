@@ -11,32 +11,31 @@ CONFIG += console
 TARGET = DataClasses
 
 SOURCES += \
-    reviewedtesttask.cpp \
+    userinformations.cpp \
     testtask.cpp \
-    examstest.cpp \
-    exception.cpp \
+    reviewedtesttask.cpp \
     reviewedtest.cpp \
     main.cpp \
-    abstracttesttask.cpp \
-    userinformations.cpp
+    exception.cpp \
+    examstest.cpp \
+    abstracttesttask.cpp \ 
+    ../KeyStorage/key.cpp \
+    ../KeyStorage/keystorage.cpp \
+    ../KeyStorage/keystoragenode.cpp
 
 HEADERS  +=  \
-    reviewedtesttask.hpp \
     dataclasses.hpp \
     testtask.hpp \
-    examstest.hpp \
-    exception.hpp \
+    reviewedtesttask.hpp \
     reviewedtest.hpp \
+    exception.hpp \
+    examstest.hpp \
     abstracttesttask.hpp \
-    userinformations.hpp
+    userinformations.hpp \
+    ../KeyStorage/key.hpp \
+    ../KeyStorage/keystorage.hpp \
+    ../KeyStorage/keystoragenode.hpp
 
-SOURCES += \
-    ../KeyStorage/keystoragenode.cpp\
-    ../KeyStorage/key.cpp
-
-HEADERS  +=  \
-    ../KeyStorage/keystoragenode.hpp\
-    ../KeyStorage/key.hpp
 
 
 

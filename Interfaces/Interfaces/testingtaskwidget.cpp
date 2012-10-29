@@ -23,6 +23,18 @@ void TestingTaskWidget::showAnswers(QStringList answers) {
     //  или 2 - сначала связать фасады с логикой
 }
 
+void TestingTaskWidget::toFinishCount()
+{
+}
+
+void TestingTaskWidget::toReckon()
+{
+}
+
+void TestingTaskWidget::dumpingOfAnswers()
+{
+}
+
 void TestingTaskWidget::showResult(QStringList results) {
 
 }

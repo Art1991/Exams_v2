@@ -11,7 +11,9 @@
 #include <QString>
 #include <QStringList>
 
-class TestingTaskWidget {
+class TestingTaskWidget : public QWidget {
+    Q_OBJECT
+
 private:
     //какие-то текстовые поля и прочие виджеты внутри
 public:
@@ -19,6 +21,9 @@ public:
     void showResult(QStringList);
     void showTaskText(QString);
     void showAnswers(QStringList);
+    void toFinishCount();
+    void toReckon();
+    void dumpingOfAnswers();
 };
 
 #endif // TESTINGTASKWIDGET_H

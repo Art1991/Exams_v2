@@ -2,13 +2,9 @@
 
 TestingWidgetFacade::TestingWidgetFacade() {
     // коннект указатель на отправителя, название сигнала, указатель на получателя, название слота
-<<<<<<< HEAD
-    QObject::connect(twptr, SIGNAL(jumpToTaskRequest(QString taskId)), this, SLOT(displayTaskById(QString id)), Qt::AutoConnection);
-=======
     QObject::connect(twptr, SIGNAL(jumpToTaskRequest(QString)), this, SLOT(setValue(displayTaskById(QString))), Qt::AutoConnection);
     QObject::connect(twptr, SIGNAL(finishTestRequest()), this, SLOT(setValue(saveResults())), Qt::AutoConnection);
     QObject::connect(twptr, SIGNAL(startTestRequest()), this, SLOT(setValue(beginTesting())), Qt::AutoConnection);
->>>>>>> ce21c51cae0efc71d39ff953d0befcc69a7e7798
 }
 
 void TestingWidgetFacade::displayTaskById(QString id) {

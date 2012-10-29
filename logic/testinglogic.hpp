@@ -4,18 +4,21 @@
 #include "dependancies.h"
 #include <QString>
 #include <QStringList>
+#include "../DataClasses/dataclasses.hpp"
+//#include "../DataClasses/userinformations.hpp"
+//#include "../DataClasses/examstest.hpp"
 
 class TestingLogic {
 public:
-    User_informations currInfo;
-    ExamsTest currTest;
+    User_informations* currInfo;
+    ExamsTest* currTest;
 
     TestingLogic();
     void saveResult();
     void transitionToParagraph();
     void showExercise();
 
-    QStringList getResult(QStringList );
+    QStringList getResults();
     QString getTaskTextById(QString id);
     QStringList getAnswersById(QString id);
     //загрузка теста
