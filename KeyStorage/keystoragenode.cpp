@@ -68,7 +68,7 @@ KeyStorageNode::KeyBind KeyStorageNode::strToEnum(const QString &str) {
 
 }
 
-QString KeyStorageNode::enumToStr(KeyStorageNode::KeyBind enumVal) {
+QString KeyStorageNode::enumToStr(const KeyStorageNode::KeyBind &enumVal) {
     switch(enumVal) {
     case KeyStorageNode::ExamsTestTask:
         return "ExamsTestTask";

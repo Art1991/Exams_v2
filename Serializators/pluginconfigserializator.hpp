@@ -13,10 +13,10 @@ public:
     PluginConfigSerializator();
 
     PluginInfo loadPluginConfig(const QString &filename);
-    void savePluginConfig(PluginInfo info, const QString &filename) throw (Exception);
+    void savePluginConfig(const PluginInfo &info, const QString &filename) throw (Exception);
 
 private:
-    QDomDocument getPluginConfigXML(PluginInfo info);
+    QDomDocument getPluginConfigXML(const PluginInfo &info);
 };
 
 #endif // PLUGINCONFIGSERIALIZATOR_H

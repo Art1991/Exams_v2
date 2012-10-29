@@ -9,7 +9,7 @@ const QList<KeyStorageNode> KeyStorage::getNodes(const Key &value) const
     {
         for(int j = 0; j < Storage.at(i).getKeyList().count(); j++)
         {
-            if(value == Storage.at(i).getKeyList().at(i))
+            if(value == Storage.at(i).getKeyList().at(j))
                 outList.push_back(Storage.at(i));
         }
     }
@@ -28,7 +28,7 @@ const QList<KeyStorageNode> KeyStorage::getNodes(const QList<Key> &value) const
 
 const KeyStorageNode KeyStorage::getBaseNode(const Key &value) const
 {
-  /*  KeyStorageNode outKey; исправить
+    int index = -1;
     Key key = value;
     for(int i = 0; i < Storage.count(); i++)
     {
@@ -37,14 +37,19 @@ const KeyStorageNode KeyStorage::getBaseNode(const Key &value) const
             if (key.isChildrenFor(Storage.at(i).getKeyList().at(j)))
             {
                 key = Storage.at(i).getKeyList().at(j);
-                outKey = Storage.at(i);
+                index = i;
                 i = 0;
                 break;
             }
 
         }
     }
-    return outKey; */
+    if (index == -1) {
+        QList<Key> list;
+         KeyStorageNode outKey(list ,KeyStorageNode::Null ,"null","null","null");
+        return outKey;
+    }
+    return Storage.at(index);
 }
 
 const QList<KeyStorageNode> KeyStorage::getAllNodes() const

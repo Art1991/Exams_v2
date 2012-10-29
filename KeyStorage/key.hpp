@@ -29,7 +29,7 @@ public:
     QList<int> getLevels() const;
 
     static KeyType strToEnum(const QString &str);
-    static QString enumToStr(Key::KeyType type);
+    static QString enumToStr(const Key::KeyType &type);
 private:
     QList<int> levels;
     KeyType type;

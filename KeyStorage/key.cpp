@@ -123,13 +123,15 @@ Key::KeyType Key::strToEnum(const QString &str) {
     return Key::Null;
 }
 
-QString Key::enumToStr( Key::KeyType type) {
+QString Key::enumToStr(const Key::KeyType &type) {
     switch(type) {
     case Key::InnerCode:
         return "InnerCode";
     case Key::OuterCode:
         return "OuterCode";
     case Key::Null:
+        return "Null";
+     default:
         return "Null";
     }
 }
