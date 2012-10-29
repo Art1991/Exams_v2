@@ -22,8 +22,8 @@ signals:
     void startTestRequest();
     void finishTestRequest();
 
-    void jumpToTaskRequest(const QString taskId);
-    void jumpToTaskHelp(const QString taskId);
+    void jumpToTaskRequest(QString taskId);
+    void jumpToTaskHelp(QString taskId);
     
 public:
     explicit TestingWidget(QWidget *parent = 0);

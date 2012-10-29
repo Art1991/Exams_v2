@@ -7,9 +7,9 @@
 #include "testingtaskwidget.hpp"
 #include "../../Logic/testinglogic.hpp"
 
-class TestingWidgetFacade {
+class TestingWidgetFacade : public QObject {
 
-friend class testingwidget;
+    Q_OBJECT
 
 private:
     TestingWidget* twptr;
@@ -31,7 +31,7 @@ signals:
 
 public slots:
     // jumpToTaskRequest(taskId)
-    void displayTaskById(QString);
+    void displayTaskById(QString id);
 
 };
 

@@ -33,9 +33,9 @@ bool Key::operator ==(const Key &value) const
 bool Key::isParentFor(const Key &value) const
 {
     Key key = value;
-    QString strValue = key.getKey(); // родитель
-    return (getKey().startsWith(strValue)
-            && (strValue.count() < getKey().count())) ? true : false;
+    QString strValue = key.getKey();
+    return (strValue.startsWith(getKey())
+            && (getKey().count() < strValue.count())) ? true : false;
 }
 
 bool Key::isDirectParentFor(const Key &value) const
@@ -72,8 +72,8 @@ bool Key::isChildrenFor(const Key &value) const
 {
     Key key = value;
     QString strValue = key.getKey();
-    return (strValue.startsWith(getKey())
-            && (getKey().count() < strValue.count())) ? true : false;
+    return (getKey().startsWith(strValue)
+            && (strValue.count() < getKey().count())) ? true : false;
 }
 
 QList<int> Key::toLevels(const QString &code)
@@ -89,7 +89,7 @@ QList<int> Key::toLevels(const QString &code)
     return res;
 }
 
-QList<int> Key::toLevels() const
+QList<int> Key::getLevels() const
 {
     return levels;
 }
