@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui webkit
+QT       += core gui webkit xml
 
 #TARGET = interfaces
 #TEMPLATE = app
@@ -15,13 +15,19 @@ SOURCES += main.cpp\
     startwidgetui.cpp \
     testpreparingwidget.cpp \
     extendstheorylearningwidget.cpp \
-    testingwidget.cpp
+    testingwidget.cpp \
+    testingwidgetfacade.cpp \
+    testingtaskwidget.cpp \
+    ../../Logic/testinglogic.cpp
 
 HEADERS  += mainwindow.hpp \
     startwidgetui.hpp \
     testpreparingwidget.hpp \
     extendstheorylearningwidget.hpp \
-    testingwidget.hpp
+    testingwidget.hpp \
+    testingwidgetfacade.hpp \
+    testingtaskwidget.hpp \
+    ../../Logic/testinglogic.hpp
 
 FORMS    += mainwindow.ui \
     startwidgetui.ui \

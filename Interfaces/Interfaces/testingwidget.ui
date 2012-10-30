@@ -165,7 +165,7 @@
 </string>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="answerPage_A"/>
         <widget class="QWidget" name="answerPage_B"/>
@@ -565,6 +565,7 @@
               <height>373</height>
              </rect>
             </property>
+            <zorder>comboBoxNavigation</zorder>
            </widget>
           </widget>
          </item>

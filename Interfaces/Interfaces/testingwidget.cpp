@@ -69,8 +69,7 @@ void TestingWidget::showHelpButtons()
     }
 }
 
-void TestingWidget::navigationsInit()
-{
+void TestingWidget::navigationsInit() {
     QVBoxLayout *verticalLayout = new QVBoxLayout;
     verticalLayout->setContentsMargins(0, 0, 0, 0);
     verticalLayout->setSpacing(0);
@@ -78,6 +77,7 @@ void TestingWidget::navigationsInit()
 
     for (int i = 1; i <= navigationButtonCount; i++)
     {
+        // navigationWidget_1..n
         QWidget *navigationWidget = new QWidget;
         navigationWidget->setObjectName("navigationWidget_" + QString::number(i, 10));
         navigationWidget->setFixedHeight(45);
@@ -88,6 +88,7 @@ void TestingWidget::navigationsInit()
         horizontalLayout->setSpacing(0);
         navigationWidget->setLayout(horizontalLayout);
 
+        // navigationButton_1..n
         QPushButton *navigationButton = new QPushButton;
         navigationButton->setObjectName("navigationButton_" + QString::number(i, 10));
         navigationButton->setFlat(true);
@@ -95,6 +96,8 @@ void TestingWidget::navigationsInit()
         navigationButton->setFixedHeight(45);
         navigationButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
         navigationWidget->layout()->addWidget(navigationButton);
+
+        // scrollAreaWidgetContents < vertical layout < qwidget < horizontal layout < button & helpbutton
 
         QToolButton *taskHelpButton = new QToolButton();
         taskHelpButton->setObjectName("navigationHelpButton_" + QString::number(i, 10));
@@ -178,6 +181,8 @@ void TestingWidget::answersCInit()
 {
 }
 
+
+
 void TestingWidget::showNavigationButtons(const int count, const QString &taskType)
 {
     for (int i = 1; i <= count; i++)
@@ -247,32 +252,29 @@ void TestingWidget::showBAnswersFields(const int count)
     }
 }
 
-void TestingWidget::showCAnswersFields(const int count)
-{
+void TestingWidget::showCAnswersFields(const int count) {
     ui->answerWidget->setCurrentIndex(2);
 }
 
-void TestingWidget::on_startTestButton_clicked()
-{
+void TestingWidget::on_startTestButton_clicked() {
     emit startTestRequest();
 }
 
-void TestingWidget::on_stopTestButton_clicked()
-{
+void TestingWidget::on_stopTestButton_clicked() {
     emit finishTestRequest();
 }
 
-void TestingWidget::on_exitPushButton_clicked()
-{
+void TestingWidget::on_exitPushButton_clicked() {
+    // резервное сохранение результата
     emit menuJumpRequest();
 }
 
-void TestingWidget::on_taskPushButton_clicked()
-{
+// слот, который был вызван сигналом navigationButton_n(clicked())
+// sender()->objectName() - имя объекта отправителя, в данном случае navigationButton_n
+void TestingWidget::on_taskPushButton_clicked() {
     QString senderName = sender()->objectName();
 
-    if (!senderName.contains("navigationButton_"))
-    {
+    if (!senderName.contains("navigationButton_")) {
         return;
     }
 
@@ -280,15 +282,15 @@ void TestingWidget::on_taskPushButton_clicked()
 
     bool ok = true;
     int button = senderName.toInt(&ok);
-
-    if (!ok)
-    {
+    if (!ok) {
         return;
     }
 
+    // 1. Что за кнопка нажата была - получили номер нажатой кнопки в переменной button
+    // 2. испустить сигнал с параметром <номер задания>
+
     QString taskId;
-    switch (ui->comboBoxNavigation->currentIndex())
-    {
+    switch (ui->comboBoxNavigation->currentIndex()) {
     case 0:
         taskId = "A" + QString::number(button);
         break;
@@ -299,7 +301,9 @@ void TestingWidget::on_taskPushButton_clicked()
         taskId = "C" + QString::number(button);
         break;
     }
+    // букву задания и потом номер задания: <буква><число>
 
+    // запуск сигнала с параметром - номером задания
     emit jumpToTaskRequest(taskId);
 }
 
@@ -345,6 +349,12 @@ void TestingWidget::on_taskGroupSwitched()
 
 void TestingWidget::on_comboBox_currentIndexChanged(int index)
 {
+
+
+}
+
+
+void TestingWidget::on_comboBoxNavigation_currentIndexChanged(int index) {
     switch (index)
     {
     case 0:
@@ -360,5 +370,5 @@ void TestingWidget::on_comboBox_currentIndexChanged(int index)
         showCAnswersFields(cCount);
         break;
     }
-
 }
+
