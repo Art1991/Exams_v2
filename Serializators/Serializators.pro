@@ -40,7 +40,6 @@ SOURCES += \
     ../DataClasses/examstest.cpp \
     ../DataClasses/exception.cpp \
     ../DataClasses/reviewedtest.cpp \
-    ../DataClasses/abstracttest.cpp \
     ../DataClasses/abstracttesttask.cpp\
     ../Plugins/plugininfo.cpp \
     ../KeyStorage/keystoragenode.cpp\
@@ -53,7 +52,6 @@ HEADERS  +=  \
     ../DataClasses/examstest.hpp \
     ../DataClasses/exception.hpp \
     ../DataClasses/reviewedtest.hpp \
-    ../DataClasses/abstracttest.hpp \
     ../DataClasses/abstracttesttask.hpp\
     ../Plugins/plugininfo.hpp\
     ../KeyStorage/keystoragenode.hpp\

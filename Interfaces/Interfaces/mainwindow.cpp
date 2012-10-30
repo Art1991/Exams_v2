@@ -6,16 +6,16 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    //ui->stackedWidget->addWidget(new ExtendsTheoryLearningWidget());
-    //ui->stackedWidget->addWidget(new StartWidgetUI());
-    /*TestingWidget *t = new TestingWidget();
+    ui->stackedWidget->addWidget(new ExtendsTheoryLearningWidget());
+    ui->stackedWidget->addWidget(new StartWidgetUI());
+    TestingWidget *t = new TestingWidget();
     t->setTaskCount(15, 10, 0);
-    ui->stackedWidget->addWidget(t);*/
+    ui->stackedWidget->addWidget(t);
     ui->stackedWidget->addWidget(new TestPreparingWidget());
 
-    //ui->stackedWidget->setCurrentIndex(0);
+    ui->stackedWidget->setCurrentIndex(0);
 
-    //setMouseTracking(true)\;
+    setMouseTracking(true);
 }
 
 MainWindow::~MainWindow()
@@ -25,7 +25,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::mousePressEvent(QMouseEvent *event)
 {
-   /* int key = event->button();
+    int key = event->button();
     if (key == Qt::LeftButton)
     {
         int index = ui->stackedWidget->currentIndex();
@@ -52,5 +52,5 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
         }
     }
     event->ignore();
-   // event->accept();*/
+   // event->accept();
 }
