@@ -10,11 +10,10 @@ TestingWidgetFacade::TestingWidgetFacade() {
 void TestingWidgetFacade::displayTaskById(QString id) {
     QString taskText = tlptr->getTaskTextById(id);
     ttwptr->showTaskText(taskText);
-    //if(id.startsWith("A")) {
-    //    QStringList answers = tlptr->getAnswersById(id);
-    //    ttwptr->showAnswers(answers);
-    //} «ачем вообще делать отдельный текстбокс с вариантами A,
-    // когда можно загружать варианты в контейнер дл€ текста заданий?
+    if(id.startsWith("A")) {
+        QStringList answers = tlptr->getAnswersById(id);
+        ttwptr->showAnswers(answers);
+    }
 }
 
 void TestingWidgetFacade::saveResults() {
