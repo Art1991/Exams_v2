@@ -18,7 +18,8 @@ SOURCES += main.cpp\
     testingwidget.cpp \
     testingwidgetfacade.cpp \
     testingtaskwidget.cpp \
-    ../../Logic/testinglogic.cpp
+    ../../Logic/testinglogic.cpp \
+    startwidgetfacade.cpp
 
 HEADERS  += mainwindow.hpp \
     startwidgetui.hpp \
@@ -27,7 +28,8 @@ HEADERS  += mainwindow.hpp \
     testingwidget.hpp \
     testingwidgetfacade.hpp \
     testingtaskwidget.hpp \
-    ../../Logic/testinglogic.hpp
+    ../../Logic/testinglogic.hpp \
+    startwidgetfacade.hpp
 
 FORMS    += mainwindow.ui \
     startwidgetui.ui \

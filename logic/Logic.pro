@@ -26,7 +26,8 @@ SOURCES += main.cpp \
     ../DataClasses/abstracttesttask.cpp \
     ../KeyStorage/key.cpp \
     ../KeyStorage/keystoragenode.cpp \
-    ../KeyStorage/keystorage.cpp
+    ../KeyStorage/keystorage.cpp \
+    startwidgetlogic.cpp
 
 
 
@@ -42,7 +43,8 @@ HEADERS += \
     ../DataClasses/abstracttesttask.hpp \
     ../KeyStorage/key.hpp \
     ../KeyStorage/keystoragenode.hpp \
-    ../KeyStorage/keystorage.hpp
+    ../KeyStorage/keystorage.hpp \
+    startwidgetlogic.hpp
 
 
 OTHER_FILES += \
