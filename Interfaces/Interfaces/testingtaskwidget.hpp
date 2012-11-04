@@ -25,7 +25,9 @@ public:
     TestingTaskWidget();
     void showResult(QStringList);
     void showTaskText(QStringList, QString);
+    void showTaskText(QString);
     void showPicture(QString);
+    void showAnswers(QStringList);
     void toFinishCount();
     void toReckon();
     void dumpingOfAnswers();

@@ -5,8 +5,6 @@
 #include <QString>
 #include <QStringList>
 #include "../DataClasses/dataclasses.hpp"
-//#include "../DataClasses/userinformations.hpp"
-//#include "../DataClasses/examstest.hpp"
 
 class TestingLogic {
 public:

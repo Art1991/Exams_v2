@@ -29,6 +29,8 @@ private slots:
 
     void on_extendedTheoryPushButton_clicked();
 
+
+    //вот эта
     void on_testPreparingPushPutton_clicked();
 
     void on_exitPushButton_clicked();

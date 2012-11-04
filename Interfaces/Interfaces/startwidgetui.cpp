@@ -1,5 +1,6 @@
 #include "startwidgetui.hpp"
 #include "ui_startwidgetui.h"
+#include <QMessageBox>
 
 StartWidgetUI::StartWidgetUI(QWidget *parent) :
     QWidget(parent),

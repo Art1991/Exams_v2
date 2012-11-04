@@ -6,7 +6,7 @@
 
 QT       += core xml
 
-QT       -= gui
+QT       += gui
 
 TARGET = Logic
 CONFIG   += console
