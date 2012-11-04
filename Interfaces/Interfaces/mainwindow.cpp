@@ -12,10 +12,7 @@ MainWindow::MainWindow(QWidget *parent) :
     t->setTaskCount(15, 10, 0);
     ui->stackedWidget->addWidget(t);
     ui->stackedWidget->addWidget(new TestPreparingWidget());
-    TestingWidget *t = new TestingWidget();
-    t->setTaskCount(15, 10, 0);
-    ui->stackedWidget->addWidget(t);
-		//ui->stackedWidget->addWidget(new ExtendsTheoryLearningWidget());
+    //ui->stackedWidget->addWidget(new ExtendsTheoryLearningWidget());
     //ui->stackedWidget->addWidget(new StartWidgetUI());
     //ui->stackedWidget->addWidget(new TestPreparingWidget());
 
