@@ -4,18 +4,15 @@ TestingTaskWidget::TestingTaskWidget() {
 
 }
 
-void TestingTaskWidget::showTaskText(QString taskText) {
-    // виджет для отображения текста задания -> setText(taskText);
+void TestingTaskWidget::showPicture(QString address) {
+    labelExercise->setPixmap(QPixmap::fromImage(QImage(address)));//отображение картинки с заданием taskText путь для файла
 }
 
-void TestingTaskWidget::showAnswers(QStringList answers) {
-    //  for(int i = 0; i < answers.length(0; i++) {
-    //  виджет для отображения вариантов ответов -> append(answers.at(i) + '\t');
-    //  }
-    //  [ Ответ 1    Ответ 2  Ответ 3     Ответ 4    ]
-
-
-
+void TestingTaskWidget::showTaskText(QStringList answers, QString taskText) {
+    labelExercise->setText(taskText + '\n');
+      for(int i = 0; i < answers.length(); i++) {
+       labelAnswers->append(answers.at(i) + '\n');
+     }
     //  Сразу осмысленные названия классов и методов и процедур и функций и всего остального
     //  Использовать принятое в проекте форматирование кода иначе будешь переписывать не только свое говнище но и чужое!!!
     //  С чего начать
@@ -23,18 +20,20 @@ void TestingTaskWidget::showAnswers(QStringList answers) {
     //  или 2 - сначала связать фасады с логикой
 }
 
-void TestingTaskWidget::toFinishCount()
-{
+void TestingTaskWidget::toFinishCount() {
+    tlptr->timeFinish();
 }
 
-void TestingTaskWidget::toReckon()
-{
+void TestingTaskWidget::toReckon() {
+    tlptr->timeStart();
 }
 
-void TestingTaskWidget::dumpingOfAnswers()
-{
+void TestingTaskWidget::dumpingOfAnswers() {
+
 }
 
-void TestingTaskWidget::showResult(QStringList results) {
-
+void TestingTaskWidget::showResult(QString results) {
+    QMessageBox msgBox;
+    msgBox.setText(results);
+    msgBox.exec();
 }

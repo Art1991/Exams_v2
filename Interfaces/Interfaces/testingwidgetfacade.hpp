@@ -1,6 +1,7 @@
 #ifndef TESTINGWIDGETFACADE_H
 #define TESTINGWIDGETFACADE_H
 
+#include <QLabel>
 #include <QString>
 #include <QStringList>
 #include "testingwidget.hpp"
