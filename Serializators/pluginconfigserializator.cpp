@@ -9,9 +9,7 @@ PluginInfo PluginConfigSerializator::loadPluginConfig(const QString &filename) {
     try
     {
         loadXmlSchema(":/xsd/xsd/pluginconfig.xsd");
-
         xml = loadXml(filename);
-
         if (!checkXml(xml))
         {
             throw Exception(Exception::BadXMLFile, QString("Bad XML file - " + filename));
@@ -26,14 +24,11 @@ PluginInfo PluginConfigSerializator::loadPluginConfig(const QString &filename) {
     QString version = xml.elementsByTagName("testVersion").at(0).toElement().text();
     QString startCode = xml.elementsByTagName("startCode").at(0).toElement().text();
     QString author = xml.elementsByTagName("author").at(0).toElement().text();
-
-
     QDomNodeList units = xml.elementsByTagName("unit");
+
     QStringList codes;
-
-    for (int i = 0; i < units.length(); i++)
+    for (unsigned int i = 0; i < units.length(); i++)
     {
-
         codes.push_back(units.at(i).toElement().elementsByTagName("innerCode").at(0).toElement().text());
         codes.push_back(units.at(i).toElement().elementsByTagName("title").at(0).toElement().text());
         codes.push_back(units.at(i).toElement().elementsByTagName("practiceFile").at(0).toElement().text());
@@ -46,7 +41,7 @@ PluginInfo PluginConfigSerializator::loadPluginConfig(const QString &filename) {
 
 
 
-QDomDocument PluginConfigSerializator::getPluginConfigXML(PluginInfo info) {
+QDomDocument PluginConfigSerializator::getPluginConfigXML(const PluginInfo &info) {
     resultXml.clear();
 
     QDomElement root = resultXml.createElement("root");
@@ -89,7 +84,7 @@ QDomDocument PluginConfigSerializator::getPluginConfigXML(PluginInfo info) {
     return resultXml;
 }
 
-void PluginConfigSerializator::savePluginConfig(PluginInfo info, const QString &filename) throw (Exception) {
+void PluginConfigSerializator::savePluginConfig(const PluginInfo &info, const QString &filename) throw (Exception) {
     QFile xmlFile(filename);
 
     if (!xmlFile.open(QIODevice::WriteOnly))

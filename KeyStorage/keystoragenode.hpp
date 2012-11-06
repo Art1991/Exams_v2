@@ -36,7 +36,7 @@ public:
 
     const KeyBind getBind() const;
 
-    static  QString enumToStr(KeyBind enumVal);
+    static  QString enumToStr(const KeyBind &enumVal);
     static  KeyBind strToEnum(const QString &str);
 private:
 

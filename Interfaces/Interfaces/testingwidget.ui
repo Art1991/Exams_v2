@@ -127,7 +127,34 @@
        </widget>
       </item>
       <item>
-       <widget class="QWidget" name="contentWidgetSpacer" native="true"/>
+       <widget class="QWidget" name="contentWidgetSpacer" native="true">
+        <widget class="QLabel" name="labelAnswers">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>20</y>
+           <width>461</width>
+           <height>491</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="labelPicture">
+         <property name="geometry">
+          <rect>
+           <x>510</x>
+           <y>20</y>
+           <width>261</width>
+           <height>421</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
       </item>
       <item>
        <widget class="QStackedWidget" name="answerWidget">
@@ -165,9 +192,12 @@
 </string>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>0</number>
         </property>
-        <widget class="QWidget" name="answerPage_A"/>
+        <widget class="QWidget" name="answerPage_A">
+         <zorder>contentWidgetSpacer</zorder>
+         <zorder>contentWidgetSpacer</zorder>
+        </widget>
         <widget class="QWidget" name="answerPage_B"/>
         <widget class="QWidget" name="answerPage_C"/>
        </widget>

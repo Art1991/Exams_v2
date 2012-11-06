@@ -6,7 +6,7 @@
 
 /**
   * NOTE:
-  * if there was conctructed the empty exception (Exception()) then errorCode == -1;
+  * if there was conctructed theIES empty exception (Exception()) then errorCode == -1;
   * if there where conctructed an exceptions with one error code but with different errorMessage then the last ErrorMessage use for.
   */
 class Exception

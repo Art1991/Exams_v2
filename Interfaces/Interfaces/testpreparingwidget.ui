@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>TestPreparingWidget</class>
  <widget class="QWidget" name="TestPreparingWidget">
@@ -549,9 +549,7 @@ QWebView {
      <zorder>extendedTheoryPushButton</zorder>
      <zorder>startTestPushButton</zorder>
      <zorder>exitPushButton</zorder>
-     <zorder>verticalSpacer</zorder>
-     <zorder>verticalSpacer_2</zorder>
-     <zorder>verticalSpacer_3</zorder>
+
      <zorder>navigationWidget</zorder>
     </widget>
    </item>

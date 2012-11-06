@@ -69,8 +69,8 @@ void TestHelpSelectingDialog::addKey(QTreeWidgetItem *root, const Key &key, cons
 
     // иначе - среди узлов нет родителей, нужно создать свой ключ
 
-    QList<int> rootLevels = rootKey.toLevels();
-    QList<int> keyLevels = key.toLevels();
+    QList<int> rootLevels = rootKey.getLevels();
+    QList<int> keyLevels = key.getLevels();
 
 
     QString newKey;
