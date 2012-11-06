@@ -1,6 +1,7 @@
 #ifndef TESTINGWIDGETFACADE_H
 #define TESTINGWIDGETFACADE_H
 
+#include <QObject>
 #include <QLabel>
 #include <QString>
 #include <QStringList>

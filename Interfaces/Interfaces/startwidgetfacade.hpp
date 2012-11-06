@@ -5,7 +5,6 @@
 #include "startwidgetui.hpp"
 #include "../../Logic/startwidgetlogic.hpp"
 
-
 // это класс - фасад, связывающий UI стартового окна с логикой работы стартового окна
 // фактически классы StartWidgetUi и StartWidgetLogic
 //
@@ -28,6 +27,10 @@ public slots:
 
     //reviewedTestLEarningRequest
     void showTestPreparingWidget();
+    void settingsDisplay();
+    void theoryDisplay();
+    void beginTesting();
+    void closeWidget();
 };
 
 #endif // STARTWIDGETFACADE_HPP
