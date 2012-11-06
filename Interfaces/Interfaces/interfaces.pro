@@ -6,8 +6,8 @@
 
 QT       += core gui webkit
 
-#TARGET = interfaces
-#TEMPLATE = app
+TARGET = interfaces
+TEMPLATE = app
 
 
 SOURCES += main.cpp\

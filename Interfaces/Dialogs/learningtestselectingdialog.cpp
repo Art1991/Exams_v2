@@ -14,6 +14,14 @@ LearningTestSelectingDialog::~LearningTestSelectingDialog()
     delete ui;
 }
 
+void LearningTestSelectingDialog::setTestsData(const QStringList &tests)
+{
+}
+
+QString LearningTestSelectingDialog::getSelectedTest()
+{
+}
+
 void LearningTestSelectingDialog::on_canselPushButton_clicked()
 {
     this->reject();

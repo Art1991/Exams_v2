@@ -22,6 +22,10 @@ void TestHelpSelectingDialog::setNodes(const QList<KeyStorageNode> &theoryNodes,
     showPracticeNodes();
 }
 
+KeyStorageNode TestHelpSelectingDialog::getSelectedKey() const
+{
+}
+
 void TestHelpSelectingDialog::on_canselPushButton_clicked()
 {
     this->reject();

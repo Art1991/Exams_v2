@@ -6,8 +6,8 @@
 
 QT       += core gui
 
-#TARGET = Dialogs
-#TEMPLATE = app
+TARGET = Dialogs
+TEMPLATE = app
 
 INCLUDEPATH += ../../KeyStorage
 

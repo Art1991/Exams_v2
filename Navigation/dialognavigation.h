@@ -7,7 +7,12 @@
 #include <QStringList>
 
 
-#include "../Interfaces/Dialogs/dialogs.hpp"
+#include "../Interfaces/Dialogs/executingtestselectingdialog.hpp"
+#include "../Interfaces/Dialogs/extendedtheoryselectingdialog.hpp"
+#include "../Interfaces/Dialogs/learningtestselectingdialog.hpp"
+#include "../Interfaces/Dialogs/personalizationdialog.hpp"
+#include "../Interfaces/Dialogs/testhelpselectingdialog.hpp"
+#include "../Interfaces/Dialogs/testresultsdialog.hpp"
 
 class KeyStorageNode;
 
@@ -17,7 +22,7 @@ class DialogNavigation : public QObject
 public:
     explicit DialogNavigation(QObject *parent = 0);
 
-    QDialog::DialogCode getDialogResult() const;
+    const int getDialogResult() const;
 signals:
     
 public slots:
@@ -28,7 +33,7 @@ public slots:
     KeyStorageNode selectTheoryForTestHelp(const QList<KeyStorageNode> &theoryNodes, const QList<KeyStorageNode> &practiceNodes);
 
 private:
-    QDialog::DialogCode dialogResult;
+    int dialogResult;
 };
 
 #endif // DIALOGNAVIGATION_H

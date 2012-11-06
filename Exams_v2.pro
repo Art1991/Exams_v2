@@ -6,4 +6,5 @@ SUBDIRS += \
     Interfaces/Interfaces \
     Serializators \
     Plugins\
-    KeyStorage
+    KeyStorage \
+    Navigation

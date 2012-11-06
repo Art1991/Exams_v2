@@ -6,7 +6,7 @@ DialogNavigation::DialogNavigation(QObject *parent) :
     dialogResult = QDialog::Rejected;
 }
 
-QDialog::DialogCode DialogNavigation::getDialogResult() const
+const int DialogNavigation::getDialogResult() const
 {
     return dialogResult;
 }
@@ -44,10 +44,9 @@ KeyStorageNode DialogNavigation::selectTheoryForLearning(const QList<KeyStorageN
 KeyStorageNode DialogNavigation::selectTheoryForTestHelp(const QList<KeyStorageNode> &theoryNodes, const QList<KeyStorageNode> &practiceNodes)
 {
     TestHelpSelectingDialog dialog;
-    dialog.setTheoryNodes(theoryNodes);
-    dialog.setPracticeNodes(practiceNodes);
+    dialog.setNodes(theoryNodes, practiceNodes);
 
     dialogResult = dialog.exec();
 
-    return dialog.getSelectedNode();
+    return dialog.getSelectedKey();
 }
