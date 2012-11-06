@@ -1,7 +1,6 @@
 #include "testingwidgetfacade.hpp"
 
-TestingWidgetFacade::TestingWidgetFacade():
-    QObject(parent) {
+TestingWidgetFacade::TestingWidgetFacade(){
     // коннект указатель на отправителя, название сигнала, указатель на получателя, название слота
     QObject::connect(twptr, SIGNAL(jumpToTaskRequest(QString)), this, SLOT(setValue(displayTaskById(QString))), Qt::AutoConnection);
     QObject::connect(twptr, SIGNAL(finishTestRequest()), this, SLOT(setValue(saveResults())), Qt::AutoConnection);
