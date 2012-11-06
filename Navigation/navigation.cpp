@@ -5,6 +5,11 @@ Navigation::Navigation(QObject *parent) :
 {
 }
 
+Navigation::Navigation(KeyStorage *keyStorage)
+{
+    this->keyStorage = keyStorage;
+}
+
 void Navigation::showTheory(const QString &filename)
 {
 }
@@ -50,5 +55,17 @@ void Navigation::onExtendedTheoryRequest()
 }
 
 void Navigation::onExecutingTestRequest()
+{
+}
+
+void Navigation::onExamTestRequest()
+{
+}
+
+void Navigation::onReviewedTestRequest()
+{
+}
+
+void Navigation::onTheoryRequest()
 {
 }
