@@ -1,6 +1,7 @@
 #ifndef TESTINGWIDGETFACADE_H
 #define TESTINGWIDGETFACADE_H
 
+#include <QObject>
 #include <QLabel>
 #include <QString>
 #include <QStringList>
@@ -9,8 +10,8 @@
 #include "../../Logic/testinglogic.hpp"
 
 
-class TestingWidgetFacade : public QObject {
-
+class TestingWidgetFacade : public QObject
+{
     Q_OBJECT
 
 private:

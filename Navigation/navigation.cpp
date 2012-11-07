@@ -42,7 +42,7 @@ void Navigation::onStartTestRequest(QList<Key> keys)
 {
 }
 
-void Navigation::onStartTestRequest(QList<Key> innerKeys, QList<Key> outerKeys)
+void Navigation::onExamsTestRequest(QList<Key> innerKeys, QList<Key> outerKeys)
 {
 }
 
@@ -58,8 +58,14 @@ void Navigation::onExecutingTestRequest()
 {
 }
 
-void Navigation::onExamTestRequest()
+void Navigation::onExamsTestRequest()
 {
+    ExecutingTestSelectingDialog dialog;
+    dialog.setTestsData(examsTestList);
+
+    dialog.exec();
+
+
 }
 
 void Navigation::onReviewedTestRequest()

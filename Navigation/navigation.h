@@ -6,7 +6,11 @@
 #include "../KeyStorage/key.hpp"
 #include "../KeyStorage/keystorage.hpp"
 #include "../KeyStorage/keystoragenode.hpp"
+#include "../Interfaces/Interfaces/startwidgetfacade.hpp"
+#include "../Interfaces/Interfaces/testingwidgetfacade.hpp"
+
 #include "dialognavigation.h"
+#include "windownavigation.h"
 
 class Navigation : public QObject
 {
@@ -27,8 +31,8 @@ public slots:
     void onMainMenuRequest();
     void onSettingsRequst();
     void onStartTestRequest(QList<Key> keys);
-    void onExamTestRequest(QList<Key> innerKeys, QList<Key> outerKeys);
-    void onExamTestRequest();
+    void onExamsTestRequest(QList<Key> innerKeys, QList<Key> outerKeys);
+    void onExamsTestRequest();
     void onReviewedTestRequest();
     void onTheoryRequest();
     void onLearningTestRequest();
@@ -40,6 +44,9 @@ private:
     DialogNavigation dialogNavigation;
     //WindowNavigation windowNavigation;
     KeyStorage *keyStorage;
+
+    QStringList examsTestList;
+    QStringList reviewedTestList;
 };
 
 #endif // NAVIGATION_H

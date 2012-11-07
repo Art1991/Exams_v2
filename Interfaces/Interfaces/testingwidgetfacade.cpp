@@ -1,10 +1,34 @@
 #include "testingwidgetfacade.hpp"
 
 TestingWidgetFacade::TestingWidgetFacade() {
-    // коннект указатель на отправителя, название сигнала, указатель на получателя, название слота
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
     QObject::connect(twptr, SIGNAL(jumpToTaskRequest(QString)), this, SLOT(setValue(displayTaskById(QString))), Qt::AutoConnection);
     QObject::connect(twptr, SIGNAL(finishTestRequest()), this, SLOT(setValue(saveResults())), Qt::AutoConnection);
     QObject::connect(twptr, SIGNAL(startTestRequest()), this, SLOT(setValue(beginTesting())), Qt::AutoConnection);
+}
+
+TestingWidgetFacade::TestingWidgetFacade(TestingWidget *, TestingLogic *, TestingTaskWidget *)
+{
+}
+
+void TestingWidgetFacade::setTestingWidgetPointer(TestingWidget *)
+{
+}
+
+void TestingWidgetFacade::setTestingLogicPointer(TestingLogic *)
+{
+}
+
+void TestingWidgetFacade::clearTestingWidgetPointer()
+{
+}
+
+void TestingWidgetFacade::clearTestingLogicPointer()
+{
+}
+
+void TestingWidgetFacade::clearTestingTaskWidgetPointer()
+{
 }
 
 void TestingWidgetFacade::displayTaskById(QString id) {
@@ -17,14 +41,14 @@ void TestingWidgetFacade::displayTaskById(QString id) {
 }
 
 void TestingWidgetFacade::saveResults() {
-    ttwptr->toFinishCount();//закончить отсчёт
-    tlptr->saveResult();//сохранить результат
+    ttwptr->toFinishCount();//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+    tlptr->saveResult();//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     QStringList results = tlptr->getResults();
-    ttwptr->showResult(results);//показать результат и переход на главную
+    ttwptr->showResult(results);//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 }
 void TestingWidgetFacade::beginTesting() {
-    ttwptr->toReckon();//начать отсчёт
-    ttwptr->dumpingOfAnswers();//сбросить ответы
-    QString taskText = tlptr->getTaskTextById("A1");//загрузить первое задание с А1
-    ttwptr->showTaskText(taskText);//показать задание
+    ttwptr->toReckon();//пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+    ttwptr->dumpingOfAnswers();//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+    QString taskText = tlptr->getTaskTextById("A1");//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅ1
+    ttwptr->showTaskText(taskText);//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 }

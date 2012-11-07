@@ -1,12 +1,12 @@
 #ifndef TESTINGLOGIC_H
 #define TESTINGLOGIC_H
 
-#include "dependancies.h"
 #include <QString>
 #include <QStringList>
 #include "../DataClasses/dataclasses.hpp"
 
-class TestingLogic {
+class TestingLogic
+{
 public:
     User_informations* currInfo;
     ExamsTest* currTest;

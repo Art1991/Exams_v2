@@ -14,3 +14,4 @@
 # Qt config user files
 *.pro.user 
 *.user 
+*.user
