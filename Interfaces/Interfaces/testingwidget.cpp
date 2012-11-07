@@ -265,12 +265,11 @@ void TestingWidget::on_stopTestButton_clicked() {
 }
 
 void TestingWidget::on_exitPushButton_clicked() {
-    // резервное сохранение результата
+
     emit menuJumpRequest();
 }
 
-// слот, который был вызван сигналом navigationButton_n(clicked())
-// sender()->objectName() - имя объекта отправителя, в данном случае navigationButton_n
+
 void TestingWidget::on_taskPushButton_clicked() {
     QString senderName = sender()->objectName();
 
@@ -286,8 +285,6 @@ void TestingWidget::on_taskPushButton_clicked() {
         return;
     }
 
-    // 1. Что за кнопка нажата была - получили номер нажатой кнопки в переменной button
-    // 2. испустить сигнал с параметром <номер задания>
 
     QString taskId;
     switch (ui->comboBoxNavigation->currentIndex()) {
@@ -301,9 +298,7 @@ void TestingWidget::on_taskPushButton_clicked() {
         taskId = "C" + QString::number(button);
         break;
     }
-    // букву задания и потом номер задания: <буква><число>
 
-    // запуск сигнала с параметром - номером задания
     emit jumpToTaskRequest(taskId);
 }
 

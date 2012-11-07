@@ -19,9 +19,6 @@ public:
     QStringList getResults();
     QString getTaskTextById(QString id);
     QStringList getAnswersById(QString id);
-    //загрузка теста
-    //сохранение результата
-    //
 };
 
 #endif // TESTINGLOGIC_H
