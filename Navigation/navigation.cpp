@@ -5,6 +5,11 @@ Navigation::Navigation(QObject *parent) :
 {
 }
 
+Navigation::Navigation(KeyStorage *keyStorage)
+{
+    this->keyStorage = keyStorage;
+}
+
 void Navigation::showTheory(const QString &filename)
 {
 }
@@ -37,7 +42,7 @@ void Navigation::onStartTestRequest(QList<Key> keys)
 {
 }
 
-void Navigation::onStartTestRequest(QList<Key> innerKeys, QList<Key> outerKeys)
+void Navigation::onExamsTestRequest(QList<Key> innerKeys, QList<Key> outerKeys)
 {
 }
 
@@ -50,5 +55,23 @@ void Navigation::onExtendedTheoryRequest()
 }
 
 void Navigation::onExecutingTestRequest()
+{
+}
+
+void Navigation::onExamsTestRequest()
+{
+    ExecutingTestSelectingDialog dialog;
+    dialog.setTestsData(examsTestList);
+
+    dialog.exec();
+
+
+}
+
+void Navigation::onReviewedTestRequest()
+{
+}
+
+void Navigation::onTheoryRequest()
 {
 }

@@ -10,8 +10,8 @@
 #include "../../Logic/testinglogic.hpp"
 
 
-class TestingWidgetFacade : public QObject {
-
+class TestingWidgetFacade : public QObject
+{
     Q_OBJECT
 
 private:
