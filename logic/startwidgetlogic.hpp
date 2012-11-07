@@ -15,7 +15,11 @@ public:
 
     //функции включения нужных виджетов
     //их несколько разных для каждого виджета своя
-    void showRequestedWidget();
+    void showRequestedWidget(); 
+    void showSettings();
+    void showTheoryParagraph();
+    void showTestingWidget();
+    void closeStartWidget();
 private:
 
 

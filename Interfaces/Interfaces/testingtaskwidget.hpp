@@ -18,7 +18,7 @@ class TestingTaskWidget : public QWidget {
     Q_OBJECT
 
 private:
-    //какие-то текстовые поля и прочие виджеты внутри
+
 public:
     TestingWidget* twptr;
     TestingLogic* tlptr;
