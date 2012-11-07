@@ -8,6 +8,8 @@
 #include "../KeyStorage/keystoragenode.hpp"
 #include "../Interfaces/Interfaces/startwidgetfacade.hpp"
 #include "../Interfaces/Interfaces/testingwidgetfacade.hpp"
+#include "../Logic/testinglogic.hpp"
+#include "../Logic/startwidgetlogic.hpp"
 
 #include "dialognavigation.h"
 #include "windownavigation.h"
@@ -42,11 +44,17 @@ public slots:
 private:
 
     DialogNavigation dialogNavigation;
-    //WindowNavigation windowNavigation;
+    WindowNavigation windowNavigation;
     KeyStorage *keyStorage;
 
     QStringList examsTestList;
-    QStringList reviewedTestList;
+    QStringList learningTestList;
+
+    //LogicClasses
+
+    TestingLogic testingLogic;
+    StartWidgetLogics startWidgetLogic;
+
 };
 
 #endif // NAVIGATION_H
