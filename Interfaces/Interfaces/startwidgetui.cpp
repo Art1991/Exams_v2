@@ -31,7 +31,8 @@ void StartWidgetUI::on_extendedTheoryPushButton_clicked()
 
 void StartWidgetUI::on_testPreparingPushPutton_clicked()
 {
-    emit reviewedTestLEarningRequest();
+    emit reviewedTestLEarningRequest(); //при нажатии на кнопку выпускается сигнал reviewedTestLEarningRequest()
+    // он объявлен в файле startwidgetui.hpp
 }
 
 void StartWidgetUI::on_exitPushButton_clicked()

@@ -1,18 +1,37 @@
 #include "startwidgetfacade.hpp"
 #include <QMessageBox>
 
-StartWidgetFacade::StartWidgetFacade(QObject *parent) :
-    QObject(parent)
-{
-    QObject::connect(swptr, SIGNAL(reviewedTestLEarningRequest()), this, SLOT(setValue(showTestPreparingWidget())), Qt::AutoConnection);
-    QObject::connect(swptr, SIGNAL(extendedTheoryJumpRequest()), this, SLOT(setValue(theoryDisplay()())), Qt::AutoConnection);
-    QObject::connect(swptr, SIGNAL(settingsJumpRequest()), this, SLOT(setValue(settingsDisplay())), Qt::AutoConnection);
-    QObject::connect(swptr, SIGNAL(exitJumpRequest()), this, SLOT(setValue(beginTesting())), Qt::AutoConnection);
-    QObject::connect(swptr, SIGNAL(testingJumpRequest()), this, SLOT(setValue(closeWidget())), Qt::AutoConnection);
+StartWidgetFacade::StartWidgetFacade(QObject *parent) : QObject(parent) {
+    swlptr = 0;
+    swptr = 0;
+}
+
+void StartWidgetFacade::setSwlptr(StartWidgetLogics* logicpointer) {
+    swlptr = logicpointer;
+}
+
+void StartWidgetFacade::setSwptr(StartWidgetUI* widgetpointer) {
+    swptr = widgetpointer;
+}
+
+bool StartWidgetFacade::connectingSignalsSlots() {
+    // коннектим если ужде есть указатели на логику и стартвиджет
+    if ((swlptr == 0) || (swptr == 0)) {
+        return false;
+    } else {
+        QObject::connect(swptr, SIGNAL(reviewedTestLEarningRequest()), this, SLOT(showTestPreparingWidget()), Qt::AutoConnection);
+        QObject::connect(swptr, SIGNAL(extendedTheoryJumpRequest()), this, SLOT(theoryDisplay()), Qt::AutoConnection);
+        QObject::connect(swptr, SIGNAL(settingsJumpRequest()), this, SLOT(settingsDisplay()), Qt::AutoConnection);
+        QObject::connect(swptr, SIGNAL(exitJumpRequest()), this, SLOT(beginTesting()), Qt::AutoConnection);
+        QObject::connect(swptr, SIGNAL(testingJumpRequest()), this, SLOT(closeWidget()), Qt::AutoConnection);
+        return true;
+    }
 }
 
 void StartWidgetFacade::showTestPreparingWidget() {
-    swlptr->showRequestedWidget();//показ разбора задач
+    // показ разбора задач
+    // используем указатель на логику стартового окна - swlptr
+    swlptr->showTestPreparingWidget();
 }
 
 void StartWidgetFacade::settingsDisplay() {

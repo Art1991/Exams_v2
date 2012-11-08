@@ -24,8 +24,23 @@ public:
 
     virtual void mousePressEvent(QMouseEvent *event);
     
+    // создаем слот для поимки сигнала из startwidgetlogic
+public slots:
+    void switchToTestPreparingWidget();
+    // добавляем реализацию этого слота в MainWindow.cpp
+
+
 private:
     Ui::MainWindow *ui;
+    StartWidgetUI* swptr;
+    TestPreparingWidget* tpwptr;
+    ExtendsTheoryLearningWidget* etlwptr;
+    TestingWidget* twptr;
+public:
+    StartWidgetUI* getStartWidgetUIPtr();
+    TestPreparingWidget* getTestPreparingWidgetPtr();
+    ExtendsTheoryLearningWidget* getExtendsTheoryLearningWidgetPtr();
+    TestingWidget* getTestingWidgetPtr();
 };
 
 #endif // MAINWINDOW_H

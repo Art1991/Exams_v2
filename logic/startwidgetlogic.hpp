@@ -7,14 +7,25 @@
 
 #include <QWidget>
 
-class StartWidgetLogics
+class StartWidgetLogics : public QObject
 {
-public:
-    StartWidgetLogics();
-    QWidget* getTestPreparingWidgetPtr();
+    Q_OBJECT
 
+public:
+    explicit StartWidgetLogics(QObject* parent = 0);
+
+    // QWidget : public QObject
+    // ...
+    // StartWidgetLogics(QWidget*) -> StartWidgetLogics(QObject*)
+    // если есть explicit
+    // то такого автокаста классов не происходит
+    // мы получим ошибку о том, что нет конструктора, принимающего аргументов QWidget*
+
+
+    void connectSignalsSlots(QWidget*);
     //функции включения нужных виджетов
     //их несколько разных для каждого виджета своя
+    void showTestPreparingWidget(); // функция, вызванная из startwidgetfacade.cpp
     void showRequestedWidget(); 
     void showSettings();
     void showTheoryParagraph();
@@ -22,6 +33,9 @@ public:
     void closeStartWidget();
 private:
 
+signals:
+    void askTaskPreparingWidget(); // вот мы выполнили первый пункт - создали сигнал
+    // теперь сигнал надо выпустить в файле startwidgetlogic.cpp
 
 };
 
